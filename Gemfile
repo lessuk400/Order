@@ -68,3 +68,4 @@ gem 'bootstrap', '~> 4.1.1'
 gem "devise"
 gem 'simple_form'
 gem 'carrierwave', '~> 1.0'
+gem "rolify"
