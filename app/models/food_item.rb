@@ -20,5 +20,26 @@ class FoodItem < ApplicationRecord
 =======
   has_many :menus
   has_many :menus, through: :meals
+<<<<<<< HEAD
 >>>>>>> 396c301... Wrodi pashe grobana forma
+=======
+
+  def self.all_meals
+    types = []
+    FoodItem.all.each do |item|
+      types << item.mealType
+    end
+    return types.uniq
+  end
+
+  def self.generate_hash
+    result = {}
+    FoodItem.all.each do |item|
+      result[item.name] = item.price
+    end
+    return result
+  end
+
+
+>>>>>>> 1b41b07... added some interface
 end

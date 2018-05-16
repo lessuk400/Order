@@ -51,7 +51,7 @@ class MenusController < ApplicationController
     @menu.meals.build
   end
 
-  def create
+  def create    
     @menu = Menu.new (menus_params)
     if @menu.save
       redirect_to menus_path
@@ -69,7 +69,11 @@ class MenusController < ApplicationController
     params
     .require(:menu)
     .permit(:name, :price, :date,
+<<<<<<< HEAD
     meals_attributes: [:price, :id, :food_item_id])
 >>>>>>> 396c301... Wrodi pashe grobana forma
+=======
+    meals_attributes: [:price, :id, :food_item_id, :_destroy])
+>>>>>>> 1b41b07... added some interface
   end
 end
