@@ -8,7 +8,7 @@ class MenusController < ApplicationController
     @menu.meals.build
   end
 
-  def create
+  def create    
     @menu = Menu.new (menus_params)
     if @menu.save
       redirect_to menus_path
@@ -26,6 +26,6 @@ class MenusController < ApplicationController
     params
     .require(:menu)
     .permit(:name, :price, :date,
-    meals_attributes: [:price, :id, :food_item_id])
+    meals_attributes: [:price, :id, :food_item_id, :_destroy])
   end
 end
