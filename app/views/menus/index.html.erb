@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <div id="flash">
   <% flash.each do |key, value| %>
     <div class="alert alert-<%= key %>"><%= value %></div>
@@ -21,3 +22,27 @@
 <hr />
 >>>>>>> 396c301... Wrodi pashe grobana forma
 <% end %>
+=======
+<div class="container-fluid" >
+  <div class="row">
+    <div class="col-10 bg-secondary">
+      <% @menus.each do |menu| %>
+        <p><%= menu.name %></p>
+        <p><% menu.meals.each do |meal| %></p>
+        <ul>
+          <li><%= meal.food_item.name %></li>
+          <li><%= meal.price %></li>
+        </ul>
+      <% end %>
+      <%end %>
+    </div>
+    <div class="col-2">
+     <% if current_user.has_role? ("admin") %>
+       <p>You are logged as Admin</p>
+     <% else %>
+       <p>Hello, dear customer </p>
+     <% end %>
+    </div>
+  </div>
+</div>
+>>>>>>> d58f565... Added Cocoon

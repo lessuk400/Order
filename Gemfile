@@ -67,6 +67,7 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 gem 'bootstrap', '~> 4.1.1'
 gem 'carrierwave', '~> 1.0'
+<<<<<<< HEAD
 gem 'cocoon'
 gem 'devise'
 gem 'draper'
@@ -76,3 +77,7 @@ gem 'rolify'
 gem 'simple_calendar', '~> 2.0'
 gem 'simple_form'
 gem 'sprockets-rails'
+=======
+gem "rolify"
+gem "cocoon"
+>>>>>>> d58f565... Added Cocoon

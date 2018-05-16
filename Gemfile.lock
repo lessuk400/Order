@@ -79,7 +79,10 @@ GEM
       archive-zip (~> 0.10)
       nokogiri (~> 1.8)
     cocoon (1.2.11)
+<<<<<<< HEAD
     coderay (1.1.2)
+=======
+>>>>>>> d58f565... Added Cocoon
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0)
