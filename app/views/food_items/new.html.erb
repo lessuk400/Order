@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 <%= simple_form_for @food_item do |f| %>
   <%= f.input :price, label: "Price" %>
   <%= f.input :name, label: "Name" %>
   <%= f.input :description, input_html: {value: "Very delicious dish"}, label: "Description" %>
   <%= f.input :meal_type, collection: FoodItem.meal_types, label: "Type" %>
+=======
+<%= simple_form_for @foodItem do |f| %>
+  <%= f.input :price, label: "Price" %>
+  <%= f.input :name, label: "Name" %>
+  <%= f.input :mealType, label: "Type" %>
+>>>>>>> 396c301... Wrodi pashe grobana forma
   <%= f.button :submit %>
 <% end %>

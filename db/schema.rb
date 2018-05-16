@@ -10,15 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2018_05_23_141754) do
+=======
+ActiveRecord::Schema.define(version: 2018_05_15_144741) do
+>>>>>>> 396c301... Wrodi pashe grobana forma
 
   create_table "food_items", force: :cascade do |t|
     t.string "name"
     t.decimal "price"
+<<<<<<< HEAD
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "meal_type"
+=======
+    t.string "mealType"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+>>>>>>> 396c301... Wrodi pashe grobana forma
   end
 
   create_table "meals", force: :cascade do |t|
@@ -37,6 +47,7 @@ ActiveRecord::Schema.define(version: 2018_05_23_141754) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+<<<<<<< HEAD
 
   create_table "order_meals", force: :cascade do |t|
     t.integer "meal_id"
@@ -56,6 +67,8 @@ ActiveRecord::Schema.define(version: 2018_05_23_141754) do
     t.index ["order_meals_id"], name: "index_orders_on_order_meals_id"
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
+=======
+>>>>>>> 396c301... Wrodi pashe grobana forma
 
   create_table "roles", force: :cascade do |t|
     t.string "name"

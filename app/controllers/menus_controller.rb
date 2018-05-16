@@ -1,10 +1,14 @@
 class MenusController < ApplicationController
   def index
+<<<<<<< HEAD
     authorize Menu
+=======
+>>>>>>> 396c301... Wrodi pashe grobana forma
     @menus = Menu.all
   end
 
   def new
+<<<<<<< HEAD
     authorize Menu
     @facade = Menus::NewFacade.new
 
@@ -42,5 +46,30 @@ class MenusController < ApplicationController
     redirect_to root_path, flash: {
       warning: t('menus_messages.new.messages.already_created')
       } if @facade.menu_already_exist?
+=======
+    @menu = Menu.new
+    @menu.meals.build
+  end
+
+  def create
+    @menu = Menu.new (menus_params)
+    if @menu.save
+      redirect_to menus_path
+    else
+      render :new
+    end
+  end
+
+  def edit
+
+  end
+
+  private
+  def menus_params
+    params
+    .require(:menu)
+    .permit(:name, :price, :date,
+    meals_attributes: [:price, :id, :food_item_id])
+>>>>>>> 396c301... Wrodi pashe grobana forma
   end
 end

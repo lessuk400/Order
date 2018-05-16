@@ -1,4 +1,5 @@
 class FoodItem < ApplicationRecord
+<<<<<<< HEAD
   FIRST_MEAL = 'first_meal'.freeze
   MAIN_MEAL  = 'main_meal'.freeze
   DRINK      = 'drink'.freeze
@@ -16,4 +17,8 @@ class FoodItem < ApplicationRecord
     main_meal:  MAIN_MEAL,
     drink:      DRINK
   }
+=======
+  has_many :menus
+  has_many :menus, through: :meals
+>>>>>>> 396c301... Wrodi pashe grobana forma
 end

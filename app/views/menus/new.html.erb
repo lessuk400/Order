@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="container-fluid">
   <div class="row">
     <div class="col-4 ">
@@ -46,3 +47,25 @@
   </div>
 
 </div>
+=======
+<!--begin<%= simple_form_for Menu.new, local: true do |f| %>
+  <%= f.input :name %>
+  <%= f.input :date, value: Date.today %>
+  <% f.object.meals.build %>
+  <%= f.fields_for :meals do |mf| %>
+    <%= mf.select :food_item_id, options_from_collection_for_select(FoodItem.all, :id, :name) %>
+    <%= mf.input :price %>
+  <% end %>
+  <%= f.button :submit %>
+<% end %>
+-->
+<%= simple_form_for @menu do |f| %>
+  <%= f.input :name %>
+  <%= f.input :date %>
+  <%= f.simple_fields_for :meals do |meal_form| %>
+    <%= meal_form.input :food_item_id, collection: FoodItem.all %>
+    <%= meal_form.input :price %>
+<% end %>
+<%= f.button :submit %>
+<% end %>
+>>>>>>> 396c301... Wrodi pashe grobana forma

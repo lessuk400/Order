@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div id="flash">
   <% flash.each do |key, value| %>
     <div class="alert alert-<%= key %>"><%= value %></div>
@@ -13,4 +14,10 @@
       <% end %>
     </ul>
   <% end %>
+=======
+<% @menus.each do |menu| %>
+  <p><%= menu.name %></p>
+  <p><% menu.food_items.name %></p>
+<hr />
+>>>>>>> 396c301... Wrodi pashe grobana forma
 <% end %>
