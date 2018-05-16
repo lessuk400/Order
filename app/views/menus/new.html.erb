@@ -12,9 +12,64 @@
 <%= simple_form_for @menu do |f| %>
   <%= f.input :name %>
   <%= f.input :date %>
-  <%= f.simple_fields_for :meals do |meal_form| %>
-    <%= meal_form.input :food_item_id, collection: FoodItem.all %>
-    <%= meal_form.input :price %>
-<% end %>
+  <div id="meals">
+      <%= f.fields_for :meals do |meal_form| %>
+        <%= render 'meal_fields', f: meal_form %>
+      <% end %>
+
+      <div class="links">
+        <%= link_to_add_association 'add meal', f, :meals %>
+      </div>
+    </div>
+
+
 <%= f.button :submit %>
 <% end %>
+<div class="container">
+      <div class="card-deck mb-3 text-center">
+        <div class="card mb-4 box-shadow">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">First</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>10 users included</li>
+              <li>2 GB of storage</li>
+              <li>Email support</li>
+              <li>Help center access</li>
+            </ul>
+            <button type="button" class="btn btn-lg btn-block btn-outline-primary">Sign up for free</button>
+          </div>
+        </div>
+        <div class="card mb-4 box-shadow">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Pro</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$15 <small class="text-muted">/ mo</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>20 users included</li>
+              <li>10 GB of storage</li>
+              <li>Priority email support</li>
+              <li>Help center access</li>
+            </ul>
+            <button type="button" class="btn btn-lg btn-block btn-primary">Get started</button>
+          </div>
+        </div>
+        <div class="card mb-4 box-shadow">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Enterprise</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$29 <small class="text-muted">/ mo</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>30 users included</li>
+              <li>15 GB of storage</li>
+              <li>Phone and email support</li>
+              <li>Help center access</li>
+            </ul>
+            <button type="button" class="btn btn-lg btn-block btn-primary">Contact us</button>
+          </div>
+        </div>
+      </div>
