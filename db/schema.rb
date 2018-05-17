@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_15_144741) do
+ActiveRecord::Schema.define(version: 2018_05_16_193029) do
 
   create_table "food_items", force: :cascade do |t|
     t.string "name"
@@ -35,6 +35,25 @@ ActiveRecord::Schema.define(version: 2018_05_15_144741) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "order_meals", force: :cascade do |t|
+    t.integer "meal_id"
+    t.integer "order_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["meal_id"], name: "index_order_meals_on_meal_id"
+    t.index ["order_id"], name: "index_order_meals_on_order_id"
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "order_meals_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.decimal "price"
+    t.index ["order_meals_id"], name: "index_orders_on_order_meals_id"
+    t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
   create_table "roles", force: :cascade do |t|

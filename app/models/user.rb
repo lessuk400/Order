@@ -2,7 +2,7 @@ class User < ApplicationRecord
   rolify
   before_create :setRole
   mount_uploader :avatar, AvatarUploader
-
+  has_many :orders
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
