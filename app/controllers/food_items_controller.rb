@@ -1,20 +1,20 @@
 class FoodItemsController < ApplicationController
   def index
-    @foodItems = FoodItem.all
+    @food_items = FoodItem.all
   end
 
   def new
-    @foodItem = FoodItem.new
+    @food_item = FoodItem.new
   end
 
   def create
-    @foodItem = FoodItem.create(foodItems_params)
+    @food_item = FoodItem.create(food_items_params)
     redirect_to food_items_path
   end
 
-
   private
-  def foodItems_params
+
+  def food_items_params
     params.require(:food_item).permit(:name, :price, :mealType)
   end
 end
