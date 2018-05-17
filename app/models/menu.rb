@@ -18,11 +18,13 @@ class Menu < ApplicationRecord
 >>>>>>> 396c301... Wrodi pashe grobana forma
 =======
   validates :name, :presence => true
-  #validates :meals
+  #validates :price,
 
 
   has_many :meals
   has_many :food_items, through: :meals
+
+  
   accepts_nested_attributes_for :meals
 
   private

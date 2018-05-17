@@ -8,6 +8,15 @@ class Meal < ApplicationRecord
 
 =======
   belongs_to :menu
+<<<<<<< HEAD
 >>>>>>> 396c301... Wrodi pashe grobana forma
+=======
+
+
+  has_many :orders
+  has_many :order_meals, through: :orders
+
+
+>>>>>>> 02a7fd6... Orders with OrderMeals
   accepts_nested_attributes_for :food_item
 end

@@ -1,8 +1,13 @@
 <% Order.all.each do |order| %>
 <hr />
+<<<<<<< HEAD
   <% order.order_meals.each do |order_meal| %>
   <p><%= order_meal.meal.food_item.name %></p>
   <p><%= order_meal.meal.food_item.price %></p>
+=======
+  <% order.order_meals.each do |om| %>
+  <p><%= om.meal.food_item.name %></p>
+>>>>>>> 02a7fd6... Orders with OrderMeals
 <% end %>
 <hr />
 <% end %>
