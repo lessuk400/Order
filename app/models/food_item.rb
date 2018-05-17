@@ -7,7 +7,7 @@ class FoodItem < ApplicationRecord
     FoodItem.all.each do |item|
       types << item.mealType
     end
-    return types.uniq
+    types.uniq
   end
 
   def self.generate_hash
@@ -15,8 +15,6 @@ class FoodItem < ApplicationRecord
     FoodItem.all.each do |item|
       result[item.name] = item.price
     end
-    return result
+    result
   end
-
-
 end
