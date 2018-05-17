@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
@@ -8,7 +6,8 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = '4af377f039c0f9f3f63fc2d5bed5d0c209d0c58ee7950af101c400a5c5290d334d9e2afa722d6c787e1f53db5dc425ce40c256a7a0834641494205fee0c0b1a2'
+  # config.secret_key = '4af377f039c0f9f3f63fc2d5bed5d0c209d0c58ee7950af10
+  # 1c400a5c5290d334d9e2afa722d6c787e1f53db5dc425ce40c256a7a0834641494205fee0c0b1a2'
 
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
@@ -114,7 +113,9 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 11
 
   # Set up a pepper to generate the hashed password.
-  # config.pepper = '8c933829ee208562ff1eb60a052ff3260644d1b313c2bca0ebeecfeb2b883d7e7d5d5569d0846d95aac57bafa5259e3c8818caa6e1c05dbf5d629d0e903766ca'
+  # config.pepper = '8c933829ee208562ff1eb60a052ff3260644d1b3
+  #                     13c2bca0ebeecfeb2b883d7e7d5d5569d0846d95
+  #                           aac57bafa5259e3c8818caa6e1c05dbf5d629d0e903766ca'
 
   # Send a notification to the original email when the user's email is changed.
   # config.send_email_changed_notification = false
@@ -280,6 +281,6 @@ Devise.setup do |config|
   # When using OmniAuth, Devise cannot automatically set OmniAuth path,
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
-  config.secret_key = '0a37102ea08449d2150786350d49ccac0a135dddde5dd7e2999b5e2681d1a61a58fe3c3b444980099272c6f3da504f3a7e3fee0df07dd0f0d90c85e1e6440613'
-
+  config.secret_key = '0a37102ea08449d2150786350d49ccac0a135ddd'\
+  'de5dd7e2999b5e2681d1a61a58fe3c3b444980099272c6f3da504f3a7e3fee0df07dd0f0d90c85e1e6440613'
 end
