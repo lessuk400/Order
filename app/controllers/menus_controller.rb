@@ -52,7 +52,7 @@ class MenusController < ApplicationController
   end
 
   def create
-    @menu = Menu.new (menus_params)
+    @menu = Menu.new menus_params
     if @menu.save
       redirect_to menus_path
     else
@@ -60,13 +60,11 @@ class MenusController < ApplicationController
     end
   end
 
-  def edit
-
-  end
-
   private
+
   def menus_params
     params
+<<<<<<< HEAD
     .require(:menu)
     .permit(:name, :price, :date,
 <<<<<<< HEAD
@@ -79,5 +77,10 @@ class MenusController < ApplicationController
 =======
     meals_attributes: [:price, :food_item_id, :_destroy])
 >>>>>>> 02a7fd6... Orders with OrderMeals
+=======
+      .require(:menu)
+      .permit(:name, :price, :date,
+      meals_attributes: %i[price food_item_id _destroy])
+>>>>>>> fe98bb6... Done with Ruboco
   end
 end

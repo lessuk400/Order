@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :orders,     only: %i[create new index]
 =======
   devise_for :users
-  root to: "hello#index"
+  root to: 'hello#index'
   resources :food_items
   resources :menus
 <<<<<<< HEAD

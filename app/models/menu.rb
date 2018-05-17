@@ -1,6 +1,7 @@
 class Menu < ApplicationRecord
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   validates :name, presence: true
 
   has_many :meals, inverse_of: :menu, dependent: :destroy
@@ -20,15 +21,21 @@ class Menu < ApplicationRecord
   validates :name, :presence => true
   #validates :price,
 
+=======
+  validates :name, presence: true
+  # validates :price,
+>>>>>>> fe98bb6... Done with Ruboco
 
   has_many :meals
   has_many :food_items, through: :meals
 
-  
   accepts_nested_attributes_for :meals
+<<<<<<< HEAD
 
   private
 
 
 >>>>>>> 1b41b07... added some interface
+=======
+>>>>>>> fe98bb6... Done with Ruboco
 end

@@ -1,5 +1,6 @@
 class OrdersController < ApplicationController
 <<<<<<< HEAD
+<<<<<<< HEAD
   def index; end
 
   def new
@@ -15,18 +16,20 @@ class OrdersController < ApplicationController
 
   end
 
+=======
+>>>>>>> fe98bb6... Done with Ruboco
   def new
     @order = Order.new
-    3.times {@order.order_meals.build}
+    3.times { @order.order_meals.build }
   end
 
   def create
-    @order = Order.new(order_params)
+    @order = Order.new order_params
     @order.user_id = current_user.id
     if @order.save
       redirect_to orders_path
     else
-      render plain: "Da zaebalo"
+      render plain: 'Da zaebalo'
     end
 >>>>>>> 02a7fd6... Orders with OrderMeals
   end
@@ -38,9 +41,14 @@ class OrdersController < ApplicationController
     params.require(:order).permit(order_meals_attributes: %i[meal_id])
 =======
     params
+<<<<<<< HEAD
     .require(:order)
     .permit(
       order_meals_attributes: [:meal_id])
 >>>>>>> 02a7fd6... Orders with OrderMeals
+=======
+      .require(:order)
+      .permit(order_meals_attributes: [:meal_id])
+>>>>>>> fe98bb6... Done with Ruboco
   end
 end

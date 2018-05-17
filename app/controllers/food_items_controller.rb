@@ -1,6 +1,7 @@
 class FoodItemsController < ApplicationController
   def index
 <<<<<<< HEAD
+<<<<<<< HEAD
     @food_items = FoodItem.all
   end
 
@@ -20,20 +21,23 @@ class FoodItemsController < ApplicationController
     params.require(:food_item).permit(:name, :description, :price, :meal_type)
 =======
     @foodItems = FoodItem.all
+=======
+    @food_items = FoodItem.all
+>>>>>>> fe98bb6... Done with Ruboco
   end
 
   def new
-    @foodItem = FoodItem.new
+    @food_item = FoodItem.new
   end
 
   def create
-    @foodItem = FoodItem.create(foodItems_params)
+    @food_item = FoodItem.create(food_items_params)
     redirect_to food_items_path
   end
 
-
   private
-  def foodItems_params
+
+  def food_items_params
     params.require(:food_item).permit(:name, :price, :mealType)
 >>>>>>> 396c301... Wrodi pashe grobana forma
   end

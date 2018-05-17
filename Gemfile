@@ -38,8 +38,12 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+<<<<<<< HEAD
   gem 'dotenv-rails'
   gem 'pry-rails'
+=======
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
+>>>>>>> fe98bb6... Done with Ruboco
 end
 
 group :development do
@@ -68,6 +72,7 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'bootstrap', '~> 4.1.1'
 gem 'carrierwave', '~> 1.0'
 <<<<<<< HEAD
+<<<<<<< HEAD
 gem 'cocoon'
 gem 'devise'
 gem 'draper'
@@ -81,3 +86,11 @@ gem 'sprockets-rails'
 gem "rolify"
 gem "cocoon"
 >>>>>>> d58f565... Added Cocoon
+=======
+gem 'cocoon'
+gem 'devise'
+gem 'jquery-rails'
+gem 'rolify'
+gem 'simple_form'
+gem 'sprockets-rails'
+>>>>>>> fe98bb6... Done with Ruboco

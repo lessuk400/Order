@@ -12,11 +12,13 @@ class Meal < ApplicationRecord
 >>>>>>> 396c301... Wrodi pashe grobana forma
 =======
 
-
   has_many :orders
   has_many :order_meals, through: :orders
 
+<<<<<<< HEAD
 
 >>>>>>> 02a7fd6... Orders with OrderMeals
+=======
+>>>>>>> fe98bb6... Done with Ruboco
   accepts_nested_attributes_for :food_item
 end
