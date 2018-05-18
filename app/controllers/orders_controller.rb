@@ -1,7 +1,6 @@
 class OrdersController < ApplicationController
   def new
-    @order = Order.new
-    3.times { @order.order_meals.build }
+    @facade = Orders::NewFacade.new
   end
 
   def create

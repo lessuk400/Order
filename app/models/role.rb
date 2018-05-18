@@ -11,4 +11,9 @@ class Role < ApplicationRecord
              allow_nil: true
 
   scopify
+
+
+  def is_admin?
+    has_role? :admin
+  end
 end
