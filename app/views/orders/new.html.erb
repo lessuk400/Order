@@ -1,7 +1,7 @@
 <%= simple_form_for @facade.order do |f| %>
   <%= f.input :user_id, input_html: {value: current_user.id} %>
   <%= f.fields_for :order_meals do |o_m_f| %>
-    <%= o_m_f.input :meal_id, collection: Menu.last.meals, label_method: lambda {|meal| "#{meal.food_item.name}"} %>
+    <%= o_m_f.input :meal_id, collection: menu_items_for_selection, label_method: lambda {|meal| "#{meal.food_item.name}"} %>
   <% end %>
   <%= f.submit %>
 <% end %>
