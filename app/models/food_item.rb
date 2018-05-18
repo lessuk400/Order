@@ -2,6 +2,8 @@ class FoodItem < ApplicationRecord
   has_many :meals
   has_many :menus, through: :meals
 
+  #enum meal_type: [:first, :main, :drink]
+
   def self.all_meals
     types = []
     FoodItem.all.each do |item|

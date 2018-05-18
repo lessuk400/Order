@@ -1,9 +1,7 @@
 $(document).ready ->
-  temp = $("#myForm").data();
-  $("#food_item").on "change", ->
-      $("#food_item_price").attr("min", 12);
-
-
+  $("#js_main").on "change", $("#js_food_item"),  ->
+      $(".js_food_item_price").last().val($(".js_food_item :selected").last().data("price"));
+      $(".js_food_item_price").last().attr("min" : $(".js_food_item :selected").last().data("price"));
 
 
 
@@ -15,7 +13,7 @@ $(document).ready ->
 
 ###
   $("#button_to_add_menu_item").click ->
-    item = $("#food_item option:selected").text();
+
     price = $("#food_item_price").val();
     template = `<div><p>${item}</p><p>${price}</p></div>`
     $("#asd_id").append(template);
