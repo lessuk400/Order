@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 <<<<<<< HEAD
+<<<<<<< HEAD
   root to: 'menus#index'
   devise_for :users, controllers: {registrations: 'users/registrations'}
   resources :food_items, only: %i[create new index]
@@ -7,7 +8,10 @@ Rails.application.routes.draw do
   resources :orders,     only: %i[create new index]
 =======
   devise_for :users
+=======
+>>>>>>> fceb1e1... added enum
   root to: 'hello#index'
+  devise_for :users
   resources :food_items
   resources :menus
 <<<<<<< HEAD

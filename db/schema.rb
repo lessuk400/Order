@@ -12,6 +12,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2018_05_23_141754) do
 =======
 ActiveRecord::Schema.define(version: 2018_05_15_144741) do
@@ -19,10 +20,14 @@ ActiveRecord::Schema.define(version: 2018_05_15_144741) do
 =======
 ActiveRecord::Schema.define(version: 2018_05_16_193029) do
 >>>>>>> 02a7fd6... Orders with OrderMeals
+=======
+ActiveRecord::Schema.define(version: 2018_05_18_152839) do
+>>>>>>> fceb1e1... added enum
 
   create_table "food_items", force: :cascade do |t|
     t.string "name"
     t.decimal "price"
+<<<<<<< HEAD
 <<<<<<< HEAD
     t.string "description"
     t.datetime "created_at", null: false
@@ -33,6 +38,12 @@ ActiveRecord::Schema.define(version: 2018_05_16_193029) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
 >>>>>>> 396c301... Wrodi pashe grobana forma
+=======
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "meal_type"
+>>>>>>> fceb1e1... added enum
   end
 
   create_table "meals", force: :cascade do |t|

@@ -153,11 +153,11 @@
       <div style="position:fixed">
         <%= f.button :submit %>
         <% end %>
-      <% FoodItem.all_meals.each do |meal_type| %>
+      <% FoodItem.meal_types do |key,value| %>
         <div class="row">
           <div class="col-12">
-            <h1><%= meal_type %></h1>
-            <div id ="<%= meal_type + "_id"%>">
+            <h1><%= key %></h1>
+            <div id ="<%= meal_type.value + "_id"%>">
             </div>
             <hr />
           </div>

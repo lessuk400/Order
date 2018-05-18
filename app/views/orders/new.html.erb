@@ -12,11 +12,15 @@
   <%= f.input :user_id, input_html: {value: current_user.id} %>
   <%= f.fields_for :order_meals do |o_m_f| %>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <%= o_m_f.input :meal_id, collection: Menu.last.meals %>
 >>>>>>> 02a7fd6... Orders with OrderMeals
 =======
     <%= o_m_f.input :meal_id, collection: Menu.last.meals, label_method: lambda {|meal| "#{meal.food_item.name}"} %>
 >>>>>>> fe98bb6... Done with Ruboco
+=======
+    <%= o_m_f.input :meal_id, collection: menu_items_for_selection, label_method: lambda {|meal| "#{meal.food_item.name}"} %>
+>>>>>>> fceb1e1... added enum
   <% end %>
   <%= f.submit %>
 <% end %>
