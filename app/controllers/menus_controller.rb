@@ -6,8 +6,7 @@ class MenusController < ApplicationController
   end
 
   def new
-    @menu = Menu.new
-    @menu.meals.build
+    @facade = Menus::NewFacade.new
   end
 
   def create
