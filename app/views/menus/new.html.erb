@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <div class="container-fluid">
   <div class="row">
     <div class="col-4 ">
@@ -116,22 +117,24 @@
           </div>
 =======
 -->
+=======
+>>>>>>> 9ac2da0... Added coffe to menu form
 <div class="container-fluid">
   <div class="row">
     <div class="col-4 ">
           <div class="card-deck mb-3 text-center">
-            <div class="card mb-4 box-shadow">
+            <div class="card mb-4 box-shadow" id="js_main">
               <div class="card-header">
                 <h4 class="my-0 font-weight-normal">Menu creator</h4>
               </div>
-              <%= simple_form_for @menu, html: {:data => FoodItem.generate_hash, id: "myForm"} do |f| %>
+              <%= simple_form_for @facade.menu, html: { id: "myForm" } do |f| %>
                 <%= f.input :name %>
                 <%= f.input :date %>
               <div class="card-body">
                 <h1 class="card-title pricing-card-title">Choose the food</small></h1>
                 <div id="meals">
-                    <%= f.fields_for :meals do |meal_form| %>
-                      <%= render 'meal_fields', f: meal_form %>
+                    <%= f.fields_for :meals do |mf| %>
+                      <%= render 'meal_fields', f: mf %>
                     <% end %>
 
                     <div class="links">
@@ -140,7 +143,7 @@
                   </div>
                   <%= f.button :button, :id => "button_to_add_menu_item", type: "button" do %>
                       Add to menu
-                      <% end %>
+                <% end %>
               </div>
             </div>
 >>>>>>> 1b41b07... added some interface

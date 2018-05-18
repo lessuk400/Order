@@ -28,6 +28,8 @@ class FoodItem < ApplicationRecord
 >>>>>>> 396c301... Wrodi pashe grobana forma
 =======
 
+  #enum meal_type: [:first, :main, :drink]
+
   def self.all_meals
     types = []
     FoodItem.all.each do |item|

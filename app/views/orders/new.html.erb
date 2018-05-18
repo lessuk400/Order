@@ -1,10 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <%= simple_form_for @facade.order do |f| %>
   <%= f.fields_for :order_meals do |o_m_f| %>
       <%= o_m_f.input :meal_id, collection: o_m_f.object.related_food_items %>
         
 =======
 <%= simple_form_for @order do |f| %>
+=======
+<%= simple_form_for @facade.order do |f| %>
+>>>>>>> 9ac2da0... Added coffe to menu form
   <%= f.input :user_id, input_html: {value: current_user.id} %>
   <%= f.fields_for :order_meals do |o_m_f| %>
 <<<<<<< HEAD

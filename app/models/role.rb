@@ -13,6 +13,7 @@ class Role < ApplicationRecord
 
   scopify
 
+<<<<<<< HEAD
 =======
 
 class Role < ApplicationRecord
@@ -28,4 +29,10 @@ class Role < ApplicationRecord
 
   scopify
 >>>>>>> fe98bb6... Done with Ruboco
+=======
+
+  def is_admin?
+    has_role? :admin
+  end
+>>>>>>> 9ac2da0... Added coffe to menu form
 end

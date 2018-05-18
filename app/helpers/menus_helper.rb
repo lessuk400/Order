@@ -1,6 +1,7 @@
 module MenusHelper
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   def food_items_for_select(food_items)
     food_items.map { |item| [item.name, item.id, data: { price: item.price }] }
   end
@@ -17,4 +18,11 @@ module MenusHelper
     current_user.has_role? :admin
   end  
 >>>>>>> 9f895c4... Simple_form_bootstrap rubocop
+=======
+  # TODO: read about pundit
+
+  def food_items_for_select(food_items)
+    food_items.map { |item| [item.name, item.id, data: { price: item.price }] }
+  end
+>>>>>>> 9ac2da0... Added coffe to menu form
 end

@@ -80,9 +80,13 @@ GEM
       nokogiri (~> 1.8)
     cocoon (1.2.11)
 <<<<<<< HEAD
+<<<<<<< HEAD
     coderay (1.1.2)
 =======
 >>>>>>> d58f565... Added Cocoon
+=======
+    coderay (1.1.2)
+>>>>>>> 9ac2da0... Added coffe to menu form
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0)

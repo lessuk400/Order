@@ -11,6 +11,7 @@ class MenusController < ApplicationController
 
   def new
 <<<<<<< HEAD
+<<<<<<< HEAD
     authorize Menu
     @facade = Menus::NewFacade.new
 
@@ -51,6 +52,9 @@ class MenusController < ApplicationController
 =======
     @menu = Menu.new
     @menu.meals.build
+=======
+    @facade = Menus::NewFacade.new
+>>>>>>> 9ac2da0... Added coffe to menu form
   end
 
   def create

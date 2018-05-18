@@ -39,11 +39,15 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
 <<<<<<< HEAD
+<<<<<<< HEAD
   gem 'dotenv-rails'
   gem 'pry-rails'
 =======
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
 >>>>>>> fe98bb6... Done with Ruboco
+=======
+  gem 'pry-rails'
+>>>>>>> 9ac2da0... Added coffe to menu form
 end
 
 group :development do

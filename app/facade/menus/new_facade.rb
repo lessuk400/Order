@@ -10,6 +10,7 @@ module Menus
       @food_items ||= FoodItem.all
     end
 
+<<<<<<< HEAD
     def weekend?
       Date.today.saturday? || Date.today.sunday?
     end
@@ -18,6 +19,8 @@ module Menus
       Menu.last&.date == Date.today
     end
 
+=======
+>>>>>>> 9ac2da0... Added coffe to menu form
     private
 
     def new_meals
