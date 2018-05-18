@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <div id="flash">
   <% flash.each do |key, value| %>
     <div class="alert alert-<%= key %>"><%= value %></div>
@@ -23,6 +24,12 @@
 >>>>>>> 396c301... Wrodi pashe grobana forma
 <% end %>
 =======
+=======
+<% if flash[:danger] %>
+    <div class="danger"><%= flash[:danger] %></div>
+  <% end %>
+
+>>>>>>> 9f895c4... Simple_form_bootstrap rubocop
 <div class="container-fluid" >
   <div class="row">
     <div class="col-10 bg-secondary">

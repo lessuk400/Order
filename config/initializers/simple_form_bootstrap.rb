@@ -20,10 +20,14 @@ SimpleForm.setup do |config|
 
   # How the label text should be generated altogether with the required text.
 <<<<<<< HEAD
+<<<<<<< HEAD
   config.label_text = ->(label, required, _explicit_label) { "#{label} #{required}" }
 =======
   config.label_text = lambda -> { |label, required, explicit_label| "#{label} #{required}" }
 >>>>>>> fe98bb6... Done with Ruboco
+=======
+  config.label_text = ->(label, required, explicit_label) { "#{label} #{required}" }
+>>>>>>> 9f895c4... Simple_form_bootstrap rubocop
 
   # Define the way to render check boxes / radio buttons with labels.
   config.boolean_style = :inline
@@ -126,11 +130,19 @@ SimpleForm.setup do |config|
     b.use :html5
     b.optional :readonly
     b.use :label, class: 'form-control-label'
+<<<<<<< HEAD
     b.wrapper tag:   'div',
               class: 'd-flex flex-row justify-content-between align-items-center' do |ba|
       ba.use :input, class: 'form-control mx-1',
       error_class: 'is-invalid', valid_class: 'is-valid'
     end
+=======
+    b.wrapper tag: 'div',
+      class: 'd-flex flex-row justify-content-between align-items-center' do |ba|
+        ba.use :input, class: 'form-control mx-1',
+        error_class: 'is-invalid', valid_class: 'is-valid'
+      end
+>>>>>>> 9f895c4... Simple_form_bootstrap rubocop
     b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
     b.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
   end
@@ -237,7 +249,11 @@ SimpleForm.setup do |config|
     b.optional :readonly
     b.use :label, class: 'col-sm-3 control-label'
     b.wrapper :grid_wrapper, tag: 'div', class: 'col-sm-9' do |ba|
+<<<<<<< HEAD
       ba.wrapper tag:   'div',
+=======
+      ba.wrapper tag: 'div',
+>>>>>>> 9f895c4... Simple_form_bootstrap rubocop
                  class: 'd-flex flex-row justify-content-between align-items-center' do |bb|
         bb.use :input, class: 'form-control mx-1',
         error_class: 'is-invalid', valid_class: 'is-valid'
@@ -314,7 +330,11 @@ SimpleForm.setup do |config|
     b.use :html5
     b.optional :readonly
     b.wrapper :form_check_wrapper,
+<<<<<<< HEAD
       tag:   'div',
+=======
+      tag: 'div',
+>>>>>>> 9f895c4... Simple_form_bootstrap rubocop
       class: 'custom-control custom-checkbox-switch' do |bb|
       bb.use :input, class: 'custom-control-input',
       error_class: 'is-invalid', valid_class: 'is-valid'
@@ -374,7 +394,11 @@ SimpleForm.setup do |config|
     b.use :html5
     b.optional :readonly
     b.use :label, class: 'form-control-label'
+<<<<<<< HEAD
     b.wrapper tag:   'div',
+=======
+    b.wrapper tag: 'div',
+>>>>>>> 9f895c4... Simple_form_bootstrap rubocop
               class: 'd-flex flex-row justify-content-between align-items-center' do |ba|
       ba.use :input, class: 'custom-select mx-1', error_class: 'is-invalid', valid_class: 'is-valid'
     end

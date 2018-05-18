@@ -1,4 +1,6 @@
 class MenusController < ApplicationController
+  before_action :check_admin_role, except: :index
+
   def index
 <<<<<<< HEAD
     authorize Menu
@@ -82,5 +84,16 @@ class MenusController < ApplicationController
       .permit(:name, :price, :date,
       meals_attributes: %i[price food_item_id _destroy])
 >>>>>>> fe98bb6... Done with Ruboco
+  end
+
+  def check_admin?
+    current_user.has_role? :admin
+  end
+
+  def check_admin_role
+    unless check_admin?
+      flash[:danger] = "You are not an Admin of this cafe"
+      redirect_to menus_path
+    end
   end
 end
