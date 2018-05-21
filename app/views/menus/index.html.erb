@@ -3,6 +3,14 @@
     <div class="alert alert-<%= key %>"><%= value %></div>
   <% end %>
 </div>
+<%= week_calendar attribute: :created_at, menus: @menus do |date, menu_items| %>
+<%= date %>
+<% menu_items.each do |item| %>
+<div>
+  <%= @menus.food_item.name %>
+</div>
+<% end %>
+<% end %>
 <div class="container-fluid" >
   <div class="row">
     <div class="col-10">

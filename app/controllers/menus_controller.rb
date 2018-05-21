@@ -12,7 +12,6 @@ class MenusController < ApplicationController
 
   def create
     @menu = Menu.new menus_params
-    authorize @menu
     if @menu.save
       redirect_to menus_path
     else
