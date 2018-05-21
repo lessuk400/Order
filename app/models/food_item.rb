@@ -2,7 +2,7 @@ class FoodItem < ApplicationRecord
   has_many :meals
   has_many :menus, through: :meals
 
-  enum meal_type: %i[:first_meal :main_meal :drink]
+  enum meal_type: %i[first_meal main_meal drink]
 
   def self.all_meal_types
     FoodItem.meal_types

@@ -13,7 +13,7 @@ module Orders
     private
 
     def new_order_meals
-      Array[new_order_meal]
+      Array[new_order_meal, new_order_meal, new_order_meal]
     end
 
     def new_order_meal

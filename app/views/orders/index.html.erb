@@ -2,6 +2,7 @@
 <hr />
   <% order.order_meals.each do |om| %>
   <p><%= om.meal.food_item.name %></p>
+  <p><%= om.meal.food_item.price %></p>
 <% end %>
 <hr />
 <% end %>
