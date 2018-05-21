@@ -38,6 +38,7 @@
   <% end %>
 </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 1b0a9e6... Added pundit
 =======
 <%= week_calendar attribute: :created_at, menus: @menus do |date, menu_items| %>
@@ -47,6 +48,15 @@
   <%= @menus.food_item.name %>
 </div>
 <% end %>
+=======
+<%= week_calendar events: @menus do |date, menus| %>
+  <%= date %>
+  <% menus.each do |menu| %>
+    <% menu.meals.each do |meal_item| %>
+      <%= meal_item.food_item.name %>
+      <% end %>
+    <% end %>
+>>>>>>> 756818d... Added calendar
 <% end %>
 >>>>>>> 610a3c3... Callendar
 <div class="container-fluid" >

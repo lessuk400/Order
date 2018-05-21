@@ -44,5 +44,11 @@ class Menu < ApplicationRecord
 >>>>>>> fe98bb6... Done with Ruboco
 =======
 
+<<<<<<< HEAD
 >>>>>>> 610a3c3... Callendar
+=======
+  def start_time
+    self.date ##Where 'start' is a attribute of type 'Date' accessible through MyModel's relationship
+  end
+>>>>>>> 756818d... Added calendar
 end

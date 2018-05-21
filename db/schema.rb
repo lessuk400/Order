@@ -42,8 +42,12 @@ ActiveRecord::Schema.define(version: 2018_05_18_152839) do
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+<<<<<<< HEAD
     t.integer "meal_type"
 >>>>>>> fceb1e1... added enum
+=======
+    t.string "meal_type"
+>>>>>>> 756818d... Added calendar
   end
 
   create_table "meals", force: :cascade do |t|
