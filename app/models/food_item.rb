@@ -1,10 +1,14 @@
 class FoodItem < ApplicationRecord
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 393483a... Draper on orders
   FIRST_MEAL = 'first_meal'.freeze
   MAIN_MEAL  = 'main_meal'.freeze
   DRINK      = 'drink'.freeze
 
+<<<<<<< HEAD
   validates :name, presence: true, uniqueness: {case_sensetive: true}, length: { maximum: 20, minimum: 3 }
   validates :price, presence: true, numericality: true
   validates :meal_type, presence: true
@@ -21,6 +25,8 @@ class FoodItem < ApplicationRecord
 =======
   has_many :menus
 =======
+=======
+>>>>>>> 393483a... Draper on orders
   has_many :meals
 >>>>>>> 02a7fd6... Orders with OrderMeals
   has_many :menus, through: :meals
@@ -28,7 +34,11 @@ class FoodItem < ApplicationRecord
 >>>>>>> 396c301... Wrodi pashe grobana forma
 =======
 
-  enum meal_type: %i[first_meal main_meal drink]
+  enum meal_type: {
+    first_meal: FIRST_MEAL,
+    main_meal:  MAIN_MEAL,
+    drink:      DRINK
+  }
 
   def self.all_meal_types
     FoodItem.meal_types

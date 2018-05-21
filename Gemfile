@@ -93,6 +93,7 @@ gem "cocoon"
 =======
 gem 'cocoon'
 gem 'devise'
+gem 'draper'
 gem 'jquery-rails'
 gem 'rolify'
 gem 'simple_form'

@@ -3,7 +3,11 @@ class OrderMealDecorator < ApplicationDecorator
   delegate :food_item, :menu, to: :meal,      allow_nil: true
 
   def related_food_items
+<<<<<<< HEAD
     menu.meals.joins(:food_item).where(food_items: { meal_type: meal_type })
       .pluck('food_items.name, meals.id')
+=======
+    menu.food_items.where(meal_type: meal_type)
+>>>>>>> 393483a... Draper on orders
   end
 end
