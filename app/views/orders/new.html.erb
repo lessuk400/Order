@@ -13,6 +13,7 @@
   <%= f.fields_for :order_meals do |o_m_f| %>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <%= o_m_f.input :meal_id, collection: Menu.last.meals %>
 >>>>>>> 02a7fd6... Orders with OrderMeals
 =======
@@ -21,6 +22,9 @@
 =======
     <%= o_m_f.input :meal_id, collection: menu_items_for_selection, label_method: lambda {|meal| "#{meal.food_item.name}"} %>
 >>>>>>> fceb1e1... added enum
+=======
+      <%= o_m_f.input :meal_id, collection: menu_items_for_selection, label_method: lambda {|meal_name| meal_name.food_item.name } %>
+>>>>>>> d2cdaec... tried enum
   <% end %>
   <%= f.submit %>
 <% end %>

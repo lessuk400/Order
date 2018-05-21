@@ -27,6 +27,7 @@ module Orders
 
     def new_order_meals
 <<<<<<< HEAD
+<<<<<<< HEAD
       FoodItem.meal_types.keys.map(&method(:built_meal))
     end
 
@@ -39,6 +40,9 @@ module Orders
       )
 =======
       Array[new_order_meal]
+=======
+      Array[new_order_meal, new_order_meal, new_order_meal]
+>>>>>>> d2cdaec... tried enum
     end
 
     def new_order_meal

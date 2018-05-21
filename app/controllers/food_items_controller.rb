@@ -38,7 +38,11 @@ class FoodItemsController < ApplicationController
   private
 
   def food_items_params
+<<<<<<< HEAD
     params.require(:food_item).permit(:name, :price, :mealType)
 >>>>>>> 396c301... Wrodi pashe grobana forma
+=======
+    params.require(:food_item).permit(:name, :price, :meal_type)
+>>>>>>> d2cdaec... tried enum
   end
 end
