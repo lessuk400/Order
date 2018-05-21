@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <div id="flash">
   <% flash.each do |key, value| %>
     <div class="alert alert-<%= key %>"><%= value %></div>
@@ -30,9 +31,16 @@
   <% end %>
 
 >>>>>>> 9f895c4... Simple_form_bootstrap rubocop
+=======
+<div id="flash">
+  <% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %>"><%= value %></div>
+  <% end %>
+</div>
+>>>>>>> 1b0a9e6... Added pundit
 <div class="container-fluid" >
   <div class="row">
-    <div class="col-10 bg-secondary">
+    <div class="col-10">
       <% @menus.each do |menu| %>
         <p><%= menu.name %></p>
         <p><% menu.meals.each do |meal| %></p>
@@ -44,11 +52,7 @@
       <%end %>
     </div>
     <div class="col-2">
-     <% if current_user.has_role? ("admin") %>
-       <p>You are logged as Admin</p>
-     <% else %>
-       <p>Hello, dear customer </p>
-     <% end %>
+     <%= user_role_status current_user %>
     </div>
   </div>
 </div>

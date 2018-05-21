@@ -98,4 +98,8 @@ gem 'jquery-rails'
 gem 'rolify'
 gem 'simple_form'
 gem 'sprockets-rails'
+<<<<<<< HEAD
 >>>>>>> fe98bb6... Done with Ruboco
+=======
+gem "pundit"
+>>>>>>> 1b0a9e6... Added pundit

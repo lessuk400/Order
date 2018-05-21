@@ -29,11 +29,16 @@ class User < ApplicationRecord
     has_role?(:admin)
 =======
   def set_role
+<<<<<<< HEAD
     if id == 1
        add_role(:admin)
     else
       add_role(:customer)
     end
 >>>>>>> fe98bb6... Done with Ruboco
+=======
+    add_role :customer
+    add_role :admin if !self.class.exists?
+>>>>>>> 1b0a9e6... Added pundit
   end
 end

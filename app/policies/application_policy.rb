@@ -1,4 +1,8 @@
 class ApplicationPolicy
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1b0a9e6... Added pundit
   attr_reader :user, :record
 
   def initialize(user, record)
@@ -11,7 +15,11 @@ class ApplicationPolicy
   end
 
   def show?
+<<<<<<< HEAD
     scope.where(id: record.id).exists?
+=======
+    scope.where(:id => record.id).exists?
+>>>>>>> 1b0a9e6... Added pundit
   end
 
   def create?

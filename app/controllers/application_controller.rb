@@ -1,7 +1,12 @@
 class ApplicationController < ActionController::Base
+<<<<<<< HEAD
   include Pundit
   
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
+=======
+  before_action :configure_permitted_parameters, if: :devise_controller?
+  include Pundit
+>>>>>>> 1b0a9e6... Added pundit
 
   private
 
@@ -20,5 +25,14 @@ class ApplicationController < ActionController::Base
       :avatar, :avatar_cache, :remove_avatar)
     end
 >>>>>>> fe98bb6... Done with Ruboco
+  end
+
+  rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
+
+  private
+
+  def user_not_authorized
+    flash[:warning] = "You are not admin of this lunch."
+    redirect_to(request.referrer || root_path)
   end
 end

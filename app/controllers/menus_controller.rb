@@ -1,5 +1,4 @@
 class MenusController < ApplicationController
-  before_action :check_admin_role, except: :index
 
   def index
 <<<<<<< HEAD
@@ -7,6 +6,7 @@ class MenusController < ApplicationController
 =======
 >>>>>>> 396c301... Wrodi pashe grobana forma
     @menus = Menu.all
+    authorize @menus
   end
 
   def new
@@ -14,6 +14,7 @@ class MenusController < ApplicationController
 <<<<<<< HEAD
     authorize Menu
     @facade = Menus::NewFacade.new
+<<<<<<< HEAD
 
     redirect_weekend
 
@@ -55,10 +56,14 @@ class MenusController < ApplicationController
 =======
     @facade = Menus::NewFacade.new
 >>>>>>> 9ac2da0... Added coffe to menu form
+=======
+    authorize @facade.menu
+>>>>>>> 1b0a9e6... Added pundit
   end
 
   def create
     @menu = Menu.new menus_params
+    authorize @menu
     if @menu.save
       redirect_to menus_path
     else
@@ -88,16 +93,5 @@ class MenusController < ApplicationController
       .permit(:name, :price, :date,
       meals_attributes: %i[price food_item_id _destroy])
 >>>>>>> fe98bb6... Done with Ruboco
-  end
-
-  def check_admin?
-    current_user.has_role? :admin
-  end
-
-  def check_admin_role
-    unless check_admin?
-      flash[:danger] = "You are not an Admin of this cafe"
-      redirect_to menus_path
-    end
   end
 end
