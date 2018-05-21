@@ -37,7 +37,18 @@
     <div class="alert alert-<%= key %>"><%= value %></div>
   <% end %>
 </div>
+<<<<<<< HEAD
 >>>>>>> 1b0a9e6... Added pundit
+=======
+<%= week_calendar attribute: :created_at, menus: @menus do |date, menu_items| %>
+<%= date %>
+<% menu_items.each do |item| %>
+<div>
+  <%= @menus.food_item.name %>
+</div>
+<% end %>
+<% end %>
+>>>>>>> 610a3c3... Callendar
 <div class="container-fluid" >
   <div class="row">
     <div class="col-10">

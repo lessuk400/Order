@@ -39,6 +39,7 @@ class FoodItem < ApplicationRecord
     main_meal:  MAIN_MEAL,
     drink:      DRINK
   }
+<<<<<<< HEAD
 
   def self.all_meal_types
     FoodItem.meal_types
@@ -57,4 +58,6 @@ class FoodItem < ApplicationRecord
 >>>>>>> 1b41b07... added some interface
 =======
 >>>>>>> fe98bb6... Done with Ruboco
+=======
+>>>>>>> 610a3c3... Callendar
 end
