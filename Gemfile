@@ -73,3 +73,4 @@ gem 'jquery-rails'
 gem 'rolify'
 gem 'simple_form'
 gem 'sprockets-rails'
+gem "pundit"
