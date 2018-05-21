@@ -11,16 +11,4 @@ class FoodItem < ApplicationRecord
     main_meal:  MAIN_MEAL,
     drink:      DRINK
   }
-
-  def self.all_meal_types
-    FoodItem.meal_types
-  end
-
-  def self.generate_hash
-    result = {}
-    FoodItem.all.each do |item|
-      result[item.name] = item.price
-    end
-    result
-  end
 end

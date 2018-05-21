@@ -65,6 +65,7 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 # custom
 
 gem 'bootstrap', '~> 4.1.1'
+gem "simple_calendar", "~> 2.0"
 gem 'carrierwave', '~> 1.0'
 gem 'cocoon'
 gem 'devise'
