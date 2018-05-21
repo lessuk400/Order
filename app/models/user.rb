@@ -14,10 +14,7 @@ class User < ApplicationRecord
   private
 
   def set_role
-    if id == 1
-       add_role(:admin)
-    else
-      add_role(:customer)
-    end
+    add_role :customer
+    add_role :admin if !self.class.exists?
   end
 end
