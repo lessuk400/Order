@@ -7,6 +7,6 @@ class Menu < ApplicationRecord
   accepts_nested_attributes_for :meals
 
   def start_time
-    self.date ##Where 'start' is a attribute of type 'Date' accessible through MyModel's relationship
+    date # #Where 'start' is a attribute of type 'Date' accessible through MyModel's relationship
   end
 end

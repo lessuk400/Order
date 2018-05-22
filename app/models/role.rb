@@ -12,7 +12,6 @@ class Role < ApplicationRecord
 
   scopify
 
-
   def is_admin?
     has_role? :admin
   end
