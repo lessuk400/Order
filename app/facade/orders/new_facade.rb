@@ -67,7 +67,7 @@ module Orders
     def built_meal(meal_type)
       OrderMeal.new(
         meal_attributes: {
-          menu: menu,
+          menu:                 menu,
           food_item_attributes: { meal_type: meal_type }
         }
       )

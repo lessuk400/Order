@@ -32,7 +32,7 @@ class ApplicationController < ActionController::Base
   private
 
   def user_not_authorized
-    flash[:warning] = "You are not admin of this lunch."
+    flash[:warning] = 'You are not admin of this lunch.'
     redirect_to(request.referrer || root_path)
   end
 end

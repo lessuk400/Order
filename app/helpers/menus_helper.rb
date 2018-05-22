@@ -29,9 +29,9 @@ module MenusHelper
 =======
 
   def user_role_status current_user
-    return "You are admin of menu" if !current_user.nil? and current_user.has_role? :admin
-    return "Hello dear custommer" if !current_user.nil?
-    "Hello. You should log in in our system"
+    return 'You are admin of menu' if !current_user.nil? && current_user.has_role?(:admin)
+    return 'Hello dear custommer' unless current_user.nil?
+    'Hello. You should log in in our system'
   end
 >>>>>>> 1b0a9e6... Added pundit
 end

@@ -1,5 +1,4 @@
 class MenusController < ApplicationController
-
   def index
 <<<<<<< HEAD
     authorize Menu
@@ -12,7 +11,18 @@ class MenusController < ApplicationController
   def new
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     authorize Menu
+=======
+    if Date.today.saturday? || Date.today.sunday?
+      flash[:warning] = 'Today is weekends. No need for menu'
+      redirect_to root_path
+    end
+    if Menu.last.date == Date.today
+      flash[:warning] = 'You have already created menu for today.'
+      redirect_to root_path
+    end
+>>>>>>> 4d9bc9a... Menu check
     @facade = Menus::NewFacade.new
 <<<<<<< HEAD
 

@@ -14,6 +14,7 @@ class Role < ApplicationRecord
   scopify
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 class Role < ApplicationRecord
@@ -31,6 +32,8 @@ class Role < ApplicationRecord
 >>>>>>> fe98bb6... Done with Ruboco
 =======
 
+=======
+>>>>>>> 4d9bc9a... Menu check
   def is_admin?
     has_role? :admin
   end

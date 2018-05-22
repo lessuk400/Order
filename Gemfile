@@ -74,7 +74,6 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 # custom
 
 gem 'bootstrap', '~> 4.1.1'
-gem "simple_calendar", "~> 2.0"
 gem 'carrierwave', '~> 1.0'
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -96,11 +95,16 @@ gem 'cocoon'
 gem 'devise'
 gem 'draper'
 gem 'jquery-rails'
+gem 'pundit'
 gem 'rolify'
+gem 'simple_calendar', '~> 2.0'
 gem 'simple_form'
 gem 'sprockets-rails'
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> fe98bb6... Done with Ruboco
 =======
 gem "pundit"
 >>>>>>> 1b0a9e6... Added pundit
+=======
+>>>>>>> 4d9bc9a... Menu check

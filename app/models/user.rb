@@ -38,7 +38,11 @@ class User < ApplicationRecord
 >>>>>>> fe98bb6... Done with Ruboco
 =======
     add_role :customer
+<<<<<<< HEAD
     add_role :admin if !self.class.exists?
 >>>>>>> 1b0a9e6... Added pundit
+=======
+    add_role :admin unless self.class.exists?
+>>>>>>> 4d9bc9a... Menu check
   end
 end
