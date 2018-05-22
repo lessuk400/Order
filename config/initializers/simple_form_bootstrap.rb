@@ -19,7 +19,7 @@ SimpleForm.setup do |config|
   config.boolean_label_class = 'form-check-label'
 
   # How the label text should be generated altogether with the required text.
-  config.label_text = ->(label, required, explicit_label) { "#{label} #{required}" }
+  config.label_text = ->(label, required, _explicit_label) { "#{label} #{required}" }
 
   # Define the way to render check boxes / radio buttons with labels.
   config.boolean_style = :inline
@@ -122,11 +122,11 @@ SimpleForm.setup do |config|
     b.use :html5
     b.optional :readonly
     b.use :label, class: 'form-control-label'
-    b.wrapper tag: 'div',
-      class: 'd-flex flex-row justify-content-between align-items-center' do |ba|
-        ba.use :input, class: 'form-control mx-1',
-        error_class: 'is-invalid', valid_class: 'is-valid'
-      end
+    b.wrapper tag:   'div',
+              class: 'd-flex flex-row justify-content-between align-items-center' do |ba|
+      ba.use :input, class: 'form-control mx-1',
+      error_class: 'is-invalid', valid_class: 'is-valid'
+    end
     b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
     b.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
   end
@@ -233,7 +233,7 @@ SimpleForm.setup do |config|
     b.optional :readonly
     b.use :label, class: 'col-sm-3 control-label'
     b.wrapper :grid_wrapper, tag: 'div', class: 'col-sm-9' do |ba|
-      ba.wrapper tag: 'div',
+      ba.wrapper tag:   'div',
                  class: 'd-flex flex-row justify-content-between align-items-center' do |bb|
         bb.use :input, class: 'form-control mx-1',
         error_class: 'is-invalid', valid_class: 'is-valid'
@@ -310,7 +310,7 @@ SimpleForm.setup do |config|
     b.use :html5
     b.optional :readonly
     b.wrapper :form_check_wrapper,
-      tag: 'div',
+      tag:   'div',
       class: 'custom-control custom-checkbox-switch' do |bb|
       bb.use :input, class: 'custom-control-input',
       error_class: 'is-invalid', valid_class: 'is-valid'
@@ -370,7 +370,7 @@ SimpleForm.setup do |config|
     b.use :html5
     b.optional :readonly
     b.use :label, class: 'form-control-label'
-    b.wrapper tag: 'div',
+    b.wrapper tag:   'div',
               class: 'd-flex flex-row justify-content-between align-items-center' do |ba|
       ba.use :input, class: 'custom-select mx-1', error_class: 'is-invalid', valid_class: 'is-valid'
     end

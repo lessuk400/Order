@@ -6,10 +6,13 @@
 <%= week_calendar events: @menus do |date, menus| %>
   <%= date %>
   <% menus.each do |menu| %>
-    <% menu.meals.each do |meal_item| %>
-      <%= meal_item.food_item.name %>
+  <h3><%= menu.name %></h3>
+    <ul>
+      <% menu.meals.each do |meal_item| %>
+        <li><%= meal_item.food_item.name %></li>
       <% end %>
-    <% end %>
+    </ul>
+  <% end %>
 <% end %>
 <div class="container-fluid" >
   <div class="row">

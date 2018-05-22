@@ -4,6 +4,6 @@ class MenuPolicy < ApplicationPolicy
   end
 
   def new?
-    user.has_role? :admin if !user.nil?
+    user&.has_role? :admin
   end
 end
