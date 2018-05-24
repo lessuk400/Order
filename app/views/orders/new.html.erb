@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <%= simple_form_for @facade.order do |f| %>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <%= f.fields_for :order_meals do |o_m_f| %>
       <%= o_m_f.input :meal_id, collection: o_m_f.object.related_food_items %>
         
@@ -31,6 +32,10 @@
   <%= f.fields_for :order_meals do |o_m_f| %>
       <%= o_m_f.input :meal_id, collection: o_m_f.object.related_food_items, label_method: :name %>
 >>>>>>> 393483a... Draper on orders
+=======
+  <%= f.fields_for :order_meals do |o_m_f| %>
+      <%= o_m_f.input :meal_id, collection: o_m_f.object.related_food_items %>
+>>>>>>> 41ec95b... Code review
   <% end %>
   <%= f.submit %>
 <% end %>

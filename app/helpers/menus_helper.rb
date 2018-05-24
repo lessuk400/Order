@@ -28,10 +28,10 @@ module MenusHelper
 >>>>>>> 9ac2da0... Added coffe to menu form
 =======
 
-  def user_role_status current_user
-    return 'You are admin of menu' if !current_user.nil? && current_user.has_role?(:admin)
-    return 'Hello dear custommer' unless current_user.nil?
-    'Hello. You should log in in our system'
+  def user_role_status(current_user)
+    return t('menus_messages.new.helpers.admin') if current_user&.has_role? :admin
+
+    return t('menus_messages.new.helpers.customer') unless current_user.nil?
   end
 >>>>>>> 1b0a9e6... Added pundit
 end

@@ -5,10 +5,10 @@ class MenusController < ApplicationController
 =======
 >>>>>>> 396c301... Wrodi pashe grobana forma
     @menus = Menu.all
-    authorize @menus
   end
 
   def new
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -69,15 +69,21 @@ class MenusController < ApplicationController
 =======
     authorize @facade.menu
 >>>>>>> 1b0a9e6... Added pundit
+=======
+    authorize Menus::NewFacade.new.menu
+    @facade = Menus::NewFacade.new
+    redirect_to root_path, flash: {warning: t('menus_messages.new.messages.weekends')} if
+                                                                                @facade.weekend?
+
+    redirect_to root_path, flash: {warning: t('menus_messages.new.messages.already_created')} if
+                                                                      @facade.menu_already_exist?
+>>>>>>> 41ec95b... Code review
   end
 
   def create
-    @menu = Menu.new menus_params
-    if @menu.save
-      redirect_to menus_path
-    else
-      render :new
-    end
+    @menu = Menu.new(menus_params)
+    redirect_to menus_path and return if @menu.save
+    render :new
   end
 
   private
@@ -99,8 +105,15 @@ class MenusController < ApplicationController
 >>>>>>> 02a7fd6... Orders with OrderMeals
 =======
       .require(:menu)
+<<<<<<< HEAD
       .permit(:name, :price, :date,
       meals_attributes: %i[price food_item_id _destroy])
 >>>>>>> fe98bb6... Done with Ruboco
+=======
+      .permit(:name,
+              :price,
+              :date,
+              meals_attributes: %i[price food_item_id _destroy])
+>>>>>>> 41ec95b... Code review
   end
 end

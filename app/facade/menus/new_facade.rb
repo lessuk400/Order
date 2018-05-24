@@ -11,6 +11,9 @@ module Menus
     end
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 41ec95b... Code review
     def weekend?
       Date.today.saturday? || Date.today.sunday?
     end
@@ -19,8 +22,11 @@ module Menus
       Menu.last&.date == Date.today
     end
 
+<<<<<<< HEAD
 =======
 >>>>>>> 9ac2da0... Added coffe to menu form
+=======
+>>>>>>> 41ec95b... Code review
     private
 
     def new_meals

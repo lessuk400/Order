@@ -13,6 +13,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2018_05_23_141754) do
 =======
 ActiveRecord::Schema.define(version: 2018_05_15_144741) do
@@ -23,6 +24,9 @@ ActiveRecord::Schema.define(version: 2018_05_16_193029) do
 =======
 ActiveRecord::Schema.define(version: 2018_05_18_152839) do
 >>>>>>> fceb1e1... added enum
+=======
+ActiveRecord::Schema.define(version: 2018_05_23_141754) do
+>>>>>>> 41ec95b... Code review
 
   create_table "food_items", force: :cascade do |t|
     t.string "name"
@@ -99,7 +103,7 @@ ActiveRecord::Schema.define(version: 2018_05_18_152839) do
   end
 
   create_table "orders", force: :cascade do |t|
-    t.integer "user_id"
+    t.integer "user_id"    
     t.integer "order_meals_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

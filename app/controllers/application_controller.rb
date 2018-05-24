@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
 <<<<<<< HEAD
+<<<<<<< HEAD
   include Pundit
   
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
@@ -27,12 +28,15 @@ class ApplicationController < ActionController::Base
 >>>>>>> fe98bb6... Done with Ruboco
   end
 
+=======
+  include Pundit
+>>>>>>> 41ec95b... Code review
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
 
   private
 
   def user_not_authorized
-    flash[:warning] = 'You are not admin of this lunch.'
-    redirect_to(request.referrer || root_path)
+    redirect_to request.referrer || root_path,
+      flash: { warning: t('menus_messages.new.messages.not_admin')}
   end
 end

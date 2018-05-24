@@ -6,6 +6,7 @@ class AddTypeFieldToFoodItem < ActiveRecord::Migration[5.2]
     rename_column :food_items, :mealType, :description
     remove_column :order_meals, :order_meals_id
 
+<<<<<<< HEAD
 =======
     add_column :food_items, :meal_type, :integer
 =======
@@ -13,5 +14,7 @@ class AddTypeFieldToFoodItem < ActiveRecord::Migration[5.2]
 >>>>>>> 756818d... Added calendar
     rename_column :food_items, :mealType, :description
 >>>>>>> fceb1e1... added enum
+=======
+>>>>>>> 41ec95b... Code review
   end
 end

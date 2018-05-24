@@ -22,6 +22,7 @@ Rails.application.routes.draw do
 >>>>>>> 02a7fd6... Orders with OrderMeals
 =======
   root to: 'menus#index'
+<<<<<<< HEAD
   devise_for :users
 <<<<<<< HEAD
   resources :food_items, only: [:create, :new, :index]
@@ -29,6 +30,9 @@ Rails.application.routes.draw do
   resources :orders,     only: [:create, :new, :index]
 >>>>>>> 1b0a9e6... Added pundit
 =======
+=======
+  devise_for :users, controllers: {registrations: 'users/registrations'}
+>>>>>>> 41ec95b... Code review
   resources :food_items, only: %i[create new index]
   resources :menus,      only: %i[create new index]
   resources :orders,     only: %i[create new index]

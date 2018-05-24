@@ -1,6 +1,7 @@
 <% Order.all.each do |order| %>
 <hr />
 <<<<<<< HEAD
+<<<<<<< HEAD
   <% order.order_meals.each do |order_meal| %>
   <p><%= order_meal.meal.food_item.name %></p>
   <p><%= order_meal.meal.food_item.price %></p>
@@ -12,6 +13,11 @@
 =======
   <p><%= om.meal.food_item.price %></p>
 >>>>>>> d2cdaec... tried enum
+=======
+  <% order.order_meals.each do |order_meal| %>
+  <p><%= order_meal.meal.food_item.name %></p>
+  <p><%= order_meal.meal.food_item.price %></p>
+>>>>>>> 41ec95b... Code review
 <% end %>
 <hr />
 <% end %>

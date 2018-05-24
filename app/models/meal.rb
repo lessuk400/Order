@@ -1,6 +1,7 @@
 class Meal < ApplicationRecord
   belongs_to :food_item
 <<<<<<< HEAD
+<<<<<<< HEAD
   belongs_to :menu, inverse_of: :meals
 
   has_many :order_meals
@@ -11,6 +12,9 @@ class Meal < ApplicationRecord
 <<<<<<< HEAD
 >>>>>>> 396c301... Wrodi pashe grobana forma
 =======
+=======
+  belongs_to :menu, inverse_of: :meals
+>>>>>>> 41ec95b... Code review
 
   has_many :orders
   has_many :order_meals, through: :orders

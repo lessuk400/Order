@@ -1,10 +1,14 @@
 class User < ApplicationRecord
   rolify
 <<<<<<< HEAD
+<<<<<<< HEAD
   before_create :set_admin!, unless: -> { self.class.exists? }
 =======
   before_create :set_role
 >>>>>>> fe98bb6... Done with Ruboco
+=======
+  before_create :set_admin!, unless: -> { self.class.exists? }
+>>>>>>> 41ec95b... Code review
   mount_uploader :avatar, AvatarUploader
 <<<<<<< HEAD
   has_many :orders, dependent: :destroy
@@ -21,6 +25,7 @@ class User < ApplicationRecord
 
   private
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   def set_admin!
     add_role(:admin)
@@ -44,5 +49,9 @@ class User < ApplicationRecord
 =======
     add_role :admin unless self.class.exists?
 >>>>>>> 4d9bc9a... Menu check
+=======
+  def set_admin!
+    add_role :admin
+>>>>>>> 41ec95b... Code review
   end
 end

@@ -36,6 +36,7 @@
   <% flash.each do |key, value| %>
     <div class="alert alert-<%= key %>"><%= value %></div>
   <% end %>
+<<<<<<< HEAD
 </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -49,13 +50,16 @@
 </div>
 <% end %>
 =======
+=======
+<%= user_role_status current_user%>
+>>>>>>> 41ec95b... Code review
 <%= week_calendar events: @menus do |date, menus| %>
   <%= date %>
   <% menus.each do |menu| %>
   <h3><%= menu.name %></h3>
     <ul>
       <% menu.meals.each do |meal_item| %>
-        <li><%= meal_item.food_item.name %></li>
+        <li><%= meal_item.food_item.name %> - <%= meal_item.price %></li>
       <% end %>
 <<<<<<< HEAD
     <% end %>
@@ -65,6 +69,7 @@
   <% end %>
 >>>>>>> 4d9bc9a... Menu check
 <% end %>
+<<<<<<< HEAD
 >>>>>>> 610a3c3... Callendar
 <div class="container-fluid" >
   <div class="row">
@@ -85,3 +90,5 @@
   </div>
 </div>
 >>>>>>> d58f565... Added Cocoon
+=======
+>>>>>>> 41ec95b... Code review

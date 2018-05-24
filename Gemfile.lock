@@ -103,12 +103,18 @@ GEM
       responders
       warden (~> 1.2.3)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 41ec95b... Code review
     dotenv (2.4.0)
     dotenv-rails (2.4.0)
       dotenv (= 2.4.0)
       railties (>= 3.2, < 6.0)
+<<<<<<< HEAD
 =======
 >>>>>>> 393483a... Draper on orders
+=======
+>>>>>>> 41ec95b... Code review
     draper (3.0.1)
       actionpack (~> 5.0)
       activemodel (~> 5.0)
@@ -272,9 +278,13 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise
 <<<<<<< HEAD
+<<<<<<< HEAD
   dotenv-rails
 =======
 >>>>>>> 393483a... Draper on orders
+=======
+  dotenv-rails
+>>>>>>> 41ec95b... Code review
   draper
   jbuilder (~> 2.5)
   jquery-rails

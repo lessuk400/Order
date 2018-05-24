@@ -11,7 +11,11 @@ class FoodItemsController < ApplicationController
 
   def create
     @food_item = FoodItem.create(food_items_params)
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> 41ec95b... Code review
     redirect_to food_items_path
   end
 

@@ -4,6 +4,7 @@ class Menu < ApplicationRecord
 <<<<<<< HEAD
   validates :name, presence: true
 
+<<<<<<< HEAD
   has_many :meals, inverse_of: :menu, dependent: :destroy
   has_many :food_items, through: :meals
 
@@ -30,6 +31,9 @@ class Menu < ApplicationRecord
 >>>>>>> 610a3c3... Callendar
 
   has_many :meals
+=======
+  has_many :meals, inverse_of: :menu
+>>>>>>> 41ec95b... Code review
   has_many :food_items, through: :meals
 
   accepts_nested_attributes_for :meals
