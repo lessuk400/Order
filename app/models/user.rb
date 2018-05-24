@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   rolify
-  before_create :set_role
+  before_create :set_admin!, unless: -> { self.class.exists? }
   mount_uploader :avatar, AvatarUploader
   has_many :orders
   devise :database_authenticatable, :registerable,
@@ -13,8 +13,7 @@ class User < ApplicationRecord
 
   private
 
-  def set_role
-    add_role :customer
-    add_role :admin unless self.class.exists?
+  def set_admin!
+    add_role :admin
   end
 end

@@ -3,6 +3,7 @@ class OrderMealDecorator < ApplicationDecorator
   delegate :food_item, :menu, to: :meal,      allow_nil: true
 
   def related_food_items
-    menu.food_items.where(meal_type: meal_type)
+    menu.meals.joins(:food_item).where(food_items: { meal_type: meal_type })
+      .map { |obj| [obj.food_item.name, obj.id] }
   end
 end

@@ -9,6 +9,7 @@ class FoodItemsController < ApplicationController
 
   def create
     @food_item = FoodItem.create(food_items_params)
+
     redirect_to food_items_path
   end
 
