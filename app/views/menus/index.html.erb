@@ -2,33 +2,15 @@
   <% flash.each do |key, value| %>
     <div class="alert alert-<%= key %>"><%= value %></div>
   <% end %>
-</div>
+<%= user_role_status current_user%>
 <%= week_calendar events: @menus do |date, menus| %>
   <%= date %>
   <% menus.each do |menu| %>
   <h3><%= menu.name %></h3>
     <ul>
       <% menu.meals.each do |meal_item| %>
-        <li><%= meal_item.food_item.name %></li>
+        <li><%= meal_item.food_item.name %> - <%= meal_item.price %></li>
       <% end %>
     </ul>
   <% end %>
 <% end %>
-<div class="container-fluid" >
-  <div class="row">
-    <div class="col-10">
-      <% @menus.each do |menu| %>
-        <p><%= menu.name %></p>
-        <p><% menu.meals.each do |meal| %></p>
-        <ul>
-          <li><%= meal.food_item.name %></li>
-          <li><%= meal.price %></li>
-        </ul>
-      <% end %>
-      <%end %>
-    </div>
-    <div class="col-2">
-     <%= user_role_status current_user %>
-    </div>
-  </div>
-</div>

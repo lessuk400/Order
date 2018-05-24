@@ -31,3 +31,13 @@
 
 en:
   hello: "Hello world"
+  menus_messages:
+      new:
+        messages:
+          weekends: "Today is weekends. No need for menu"
+          already_created: "You have already created menu for today."
+          not_admin: "You are not admin of this lunch."
+        helpers:
+          admin: "You are admin of menu"
+          customer: "Hello dear custommer"
+          default: "Hello. You should log in in our system"

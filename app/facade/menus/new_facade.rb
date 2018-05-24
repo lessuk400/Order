@@ -10,6 +10,14 @@ module Menus
       @food_items ||= FoodItem.all
     end
 
+    def weekend?
+      Date.today.saturday? || Date.today.sunday?
+    end
+
+    def menu_already_exist?
+      Menu.last&.date == Date.today
+    end
+
     private
 
     def new_meals
