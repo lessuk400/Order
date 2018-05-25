@@ -4,6 +4,6 @@ class OrderMealDecorator < ApplicationDecorator
 
   def related_food_items
     menu.meals.joins(:food_item).where(food_items: { meal_type: meal_type })
-      .map { |obj| [obj.food_item.name, obj.id] }
+      .pluck('food_items.name, meals.id')
   end
 end

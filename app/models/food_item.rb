@@ -3,7 +3,12 @@ class FoodItem < ApplicationRecord
   MAIN_MEAL  = 'main_meal'.freeze
   DRINK      = 'drink'.freeze
 
-  has_many :meals
+  validates :name, presence: true, uniqueness: {case_sensetive: true}, length: { maximum: 20, minimum: 3 }
+  validates :price, presence: true, numericality: true
+  validates :meal_type, presence: true
+  validates :description, presence: true, length: { maximum: 100, minimum: 10 }
+
+  has_many :meals, dependent: :destroy
   has_many :menus, through: :meals
 
   enum meal_type: {
