@@ -1,0 +1,16 @@
+<div id="flash">
+  <% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %>"><%= value %></div>
+  <% end %>
+<%= user_role_status current_user%>
+<%= week_calendar attribute: :date, events: @menus do |date, menus| %>
+  <%= date %>
+  <% menus.each do |menu| %>
+  <h3><%= menu.name %></h3>
+    <ul>
+      <% menu.meals.each do |meal_item| %>
+        <li><%= meal_item.food_item.name %> - <%= meal_item.price %></li>
+      <% end %>
+    </ul>
+  <% end %>
+<% end %>

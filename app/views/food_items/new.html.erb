@@ -1,0 +1,7 @@
+<%= simple_form_for @food_item do |f| %>
+  <%= f.input :price, label: "Price" %>
+  <%= f.input :name, label: "Name" %>
+  <%= f.input :description, input_html: {value: "Very delicious dish"}, label: "Description" %>
+  <%= f.input :meal_type, collection: FoodItem.meal_types, label: "Type" %>
+  <%= f.button :submit %>
+<% end %>

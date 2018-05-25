@@ -8,8 +8,9 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = '4af377f039c0f9f3f63fc2d5bed5d0c209d0c58ee7950af101c400a5c5290d334d9e2afa722d6c787e1f53db5dc425ce40c256a7a0834641494205fee0c0b1a2'
-  
+  # config.secret_key = '4af377f039c0f9f3f63fc2d5bed5d0c209d0c58ee7950af10
+  # 1c400a5c5290d334d9e2afa722d6c787e1f53db5dc425ce40c256a7a0834641494205fee0c0b1a2'
+
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
   # config.parent_controller = 'DeviseController'
@@ -114,7 +115,9 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 11
 
   # Set up a pepper to generate the hashed password.
-  # config.pepper = '8c933829ee208562ff1eb60a052ff3260644d1b313c2bca0ebeecfeb2b883d7e7d5d5569d0846d95aac57bafa5259e3c8818caa6e1c05dbf5d629d0e903766ca'
+  # config.pepper = '8c933829ee208562ff1eb60a052ff3260644d1b3
+  #                     13c2bca0ebeecfeb2b883d7e7d5d5569d0846d95
+  #                           aac57bafa5259e3c8818caa6e1c05dbf5d629d0e903766ca'
 
   # Send a notification to the original email when the user's email is changed.
   # config.send_email_changed_notification = false
@@ -168,7 +171,7 @@ Devise.setup do |config|
   # Email regex used to validate email formats. It simply asserts that
   # one (and only one) @ exists in the given string. This is mainly
   # to give user feedback and not to assert the e-mail validity.
-  config.email_regexp = /\A[^@\s]+@[^@\s]+\z/
+  config.email_regexp = %r{\A[^@\s]+@[^@\s]+\z}
 
   # ==> Configuration for :timeoutable
   # The time you want to timeout the user session without activity. After this
@@ -280,4 +283,5 @@ Devise.setup do |config|
   # When using OmniAuth, Devise cannot automatically set OmniAuth path,
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
+  config.secret_key = ENV['SECRET_KEY']
 end
