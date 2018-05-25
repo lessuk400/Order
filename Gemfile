@@ -36,10 +36,25 @@ gem 'jbuilder', '~> 2.5'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
+# custom
+
+gem 'bootstrap', '~> 4.1.1'
+gem 'carrierwave', '~> 1.0'
+gem 'cocoon'
+gem 'devise'
+gem 'draper'
+gem 'jquery-rails'
+gem 'pundit'
+gem 'rolify'
+gem 'simple_calendar', '~> 2.0'
+gem 'simple_form'
+gem 'sprockets-rails'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'dotenv-rails'
   gem 'pry-rails'
+  gem 'rubocop', require: false
 end
 
 group :development do
@@ -62,17 +77,3 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
-
-# custom
-
-gem 'bootstrap', '~> 4.1.1'
-gem 'carrierwave', '~> 1.0'
-gem 'cocoon'
-gem 'devise'
-gem 'draper'
-gem 'jquery-rails'
-gem 'pundit'
-gem 'rolify'
-gem 'simple_calendar', '~> 2.0'
-gem 'simple_form'
-gem 'sprockets-rails'

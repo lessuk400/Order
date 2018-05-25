@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Meal < ApplicationRecord
   belongs_to :food_item
   belongs_to :menu, inverse_of: :meals

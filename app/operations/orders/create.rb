@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 module Orders
   class Create < Callable
     def initialize(user_id, params = {})
-      @user_id = user_id
+      @user_id      = user_id
       @order_params = params
     end
 

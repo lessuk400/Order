@@ -3,18 +3,17 @@ class OrderForm
   FOOD_ITEM_DATA = '.js-food-item-set-price'
   FORM_SELECTOR = '#js-main'
 
-  constructor: (@form) ->
-    @form = $(FORM_SELECTOR)
-    console.log("#{@form}")
+  constructor: (selector = FORM_SELECTOR) ->
+    @form = $(selector)
 
   init: ->
     @bindEvents()
 
   bindEvents: ->
     @form.on 'change', FOOD_ITEM_SELECTOR, ->
-      price = $("#{FOOD_ITEM_SELECTOR} :selected").last().data('price')
-      console.log("#{price}")
-      $("#{FOOD_ITEM_DATA}").last().attr("min" : price).val(price)
+      price = $('option:selected', this).data('price')
+
+      $(FOOD_ITEM_DATA, $(this).closest('.nested-fields')).attr('min' : price).val(price)
 
 $ ->
-  new OrderForm('#js-main').init()
+  new OrderForm().init()

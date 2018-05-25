@@ -1,14 +1,24 @@
+# frozen_string_literal: true
+
 class OrdersController < ApplicationController
-  def index; end
+  def index
+    authorize(Order)
+  end
 
   def new
+    authorize(Order)
+
     @facade = Orders::NewFacade.new
   end
 
   def create
+    authorize(Order)
+
     @order = Orders::Create.call(current_user.id, order_params)
-    redirect_to orders_path and return if @order.save
-    render plain: 'Something gone wrong'
+
+    return redirect_to orders_path if @order.save
+
+    render plain: t('orders.create.failed')
   end
 
   private

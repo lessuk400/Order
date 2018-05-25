@@ -3,7 +3,7 @@
     <div class="alert alert-<%= key %>"><%= value %></div>
   <% end %>
 <%= user_role_status current_user%>
-<%= week_calendar events: @menus do |date, menus| %>
+<%= week_calendar attribute: :date, events: @menus do |date, menus| %>
   <%= date %>
   <% menus.each do |menu| %>
   <h3><%= menu.name %></h3>

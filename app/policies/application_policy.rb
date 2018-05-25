@@ -1,53 +1,41 @@
+# frozen_string_literal: true
+
 class ApplicationPolicy
-  attr_reader :user, :record
-
-  def initialize(user, record)
-    @user = user
-    @record = record
+  def initialize(user, resource, **context)
+    @user     = user
+    @resource = resource
+    @context  = context
   end
 
-  def index?
+  delegate :admin?, to: :user, allow_nil: true
+
+  private
+
+  attr_reader :user, :resource, :context
+
+  def act_as_assigned_user?(other_user = resource_user)
+    user == other_user
+  end
+
+  def allowed
+    true
+  end
+
+  def not_allowed
     false
   end
 
-  def show?
-    scope.where(id: record.id).exists?
+  def user_exists?
+    user.present?
   end
 
-  def create?
-    false
-  end
+  alias_method :index?,   :not_allowed
+  alias_method :show?,    :not_allowed
+  alias_method :create?,  :not_allowed
+  alias_method :new?,     :create?
+  alias_method :update?,  :not_allowed
+  alias_method :edit?,    :update?
+  alias_method :destroy?, :not_allowed
 
-  def new?
-    create?
-  end
-
-  def update?
-    false
-  end
-
-  def edit?
-    update?
-  end
-
-  def destroy?
-    false
-  end
-
-  def scope
-    Pundit.policy_scope!(user, record.class)
-  end
-
-  class Scope
-    attr_reader :user, :scope
-
-    def initialize(user, scope)
-      @user = user
-      @scope = scope
-    end
-
-    def resolve
-      scope
-    end
-  end
+  public :index?, :show?, :create?, :new?, :update?, :edit?, :destroy?
 end

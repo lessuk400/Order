@@ -1,23 +1,28 @@
+# frozen_string_literal: true
+
 class MenusController < ApplicationController
   def index
-    authorize Menu
+    authorize(Menu)
+
     @menus = Menu.all
   end
 
   def new
-    authorize Menu
+    authorize(Menu)
+
     @facade = Menus::NewFacade.new
 
-    redirect_weekend
-
-    redirect_menu_exist
+    redirect_weekend    if @facade.menu_already_exist?
+    redirect_menu_exist if @facade.weekend?
   end
 
   def create
+    authorize(Menu)
+
     @menu = Menu.new(menus_params)
 
-    redirect_to menus_path and return if @menu.save
-    
+    return redirect_to menus_path if @menu.save
+
     render :new
   end
 
@@ -33,14 +38,10 @@ class MenusController < ApplicationController
   end
 
   def redirect_weekend
-    redirect_to root_path, flash: {
-      warning: t('menus_messages.new.messages.weekends')
-      } if @facade.weekend?
+    redirect_to root_path, alert: t('menus_messages.new.messages.weekends')
   end
 
   def redirect_menu_exist
-    redirect_to root_path, flash: {
-      warning: t('menus_messages.new.messages.already_created')
-      } if @facade.menu_already_exist?
+    redirect_to root_path, alert: t('menus_messages.new.messages.already_created')
   end
 end

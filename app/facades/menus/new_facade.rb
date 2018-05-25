@@ -1,7 +1,7 @@
+# frozen_string_literal: true
+
 module Menus
   class NewFacade
-    attr_accessor :menu, :food_items
-
     def menu
       @menu ||= Menu.new(meals: new_meals)
     end

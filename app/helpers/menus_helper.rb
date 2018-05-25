@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module MenusHelper
   def food_items_for_select(food_items)
     food_items.map { |item| [item.name, item.id, data: { price: item.price }] }
