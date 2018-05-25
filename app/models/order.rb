@@ -4,6 +4,7 @@ class Order < ApplicationRecord
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   has_many :order_meals, dependent: :destroy
   has_many :meals, through: :order_meals
 
@@ -19,6 +20,9 @@ class Order < ApplicationRecord
 =======
   has_many :order_meals, dependent: :destroy
 >>>>>>> 8a4fae3... Fixes
+=======
+  has_many :order_meals, dependent: :destroy
+>>>>>>> d1aaad3... Fixes
   has_many :meals, through: :order_meals
 
 >>>>>>> fe98bb6... Done with Ruboco

@@ -6,6 +6,7 @@ class OrderMealDecorator < ApplicationDecorator
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     menu.meals.joins(:food_item).where(food_items: { meal_type: meal_type })
       .pluck('food_items.name, meals.id')
 =======
@@ -19,5 +20,9 @@ class OrderMealDecorator < ApplicationDecorator
     menu.meals.joins(:food_item).where(food_items: { meal_type: meal_type })
       .pluck('food_items.name, meals.id')
 >>>>>>> 8a4fae3... Fixes
+=======
+    menu.meals.joins(:food_item).where(food_items: { meal_type: meal_type })
+      .pluck('food_items.name, meals.id')
+>>>>>>> d1aaad3... Fixes
   end
 end

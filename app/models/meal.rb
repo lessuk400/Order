@@ -7,6 +7,7 @@ class Meal < ApplicationRecord
   has_many :order_meals
   has_many :orders, through: :order_meals
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   belongs_to :menu
@@ -21,6 +22,8 @@ class Meal < ApplicationRecord
   has_many :order_meals, through: :orders
 =======
 >>>>>>> 8a4fae3... Fixes
+=======
+>>>>>>> d1aaad3... Fixes
 
 <<<<<<< HEAD
 

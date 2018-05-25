@@ -49,6 +49,7 @@ class OrdersController < ApplicationController
   def order_params
     params.require(:order).permit(order_meals_attributes: %i[meal_id])
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     params
 <<<<<<< HEAD
@@ -66,5 +67,7 @@ class OrdersController < ApplicationController
 >>>>>>> 41ec95b... Code review
 =======
 >>>>>>> 8a4fae3... Fixes
+=======
+>>>>>>> d1aaad3... Fixes
   end
 end

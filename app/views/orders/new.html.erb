@@ -6,6 +6,7 @@
   <%= f.fields_for :order_meals do |o_m_f| %>
       <%= o_m_f.input :meal_id, collection: o_m_f.object.related_food_items %>
 <<<<<<< HEAD
+<<<<<<< HEAD
         
 =======
 <%= simple_form_for @order do |f| %>
@@ -39,6 +40,8 @@
 >>>>>>> 41ec95b... Code review
 =======
 >>>>>>> 8a4fae3... Fixes
+=======
+>>>>>>> d1aaad3... Fixes
   <% end %>
   <%= f.submit %>
 <% end %>

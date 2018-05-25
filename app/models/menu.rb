@@ -6,6 +6,7 @@ class Menu < ApplicationRecord
 
   has_many :meals, inverse_of: :menu, dependent: :destroy
 <<<<<<< HEAD
+<<<<<<< HEAD
   has_many :food_items, through: :meals
 
   accepts_nested_attributes_for :meals
@@ -36,6 +37,8 @@ class Menu < ApplicationRecord
 >>>>>>> 41ec95b... Code review
 =======
 >>>>>>> 8a4fae3... Fixes
+=======
+>>>>>>> d1aaad3... Fixes
   has_many :food_items, through: :meals
 
   accepts_nested_attributes_for :meals

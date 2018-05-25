@@ -7,6 +7,7 @@ class MenuPolicy < ApplicationPolicy
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     user&.admin?
 =======
     user.has_role? :admin if !user.nil?
@@ -17,5 +18,8 @@ class MenuPolicy < ApplicationPolicy
 =======
     user&.admin?
 >>>>>>> 8a4fae3... Fixes
+=======
+    user&.admin?
+>>>>>>> d1aaad3... Fixes
   end
 end

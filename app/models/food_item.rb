@@ -15,6 +15,7 @@ class FoodItem < ApplicationRecord
 
   has_many :meals, dependent: :destroy
 <<<<<<< HEAD
+<<<<<<< HEAD
   has_many :menus, through: :meals
 
   enum meal_type: {
@@ -31,6 +32,8 @@ class FoodItem < ApplicationRecord
 >>>>>>> 02a7fd6... Orders with OrderMeals
 =======
 >>>>>>> 8a4fae3... Fixes
+=======
+>>>>>>> d1aaad3... Fixes
   has_many :menus, through: :meals
 <<<<<<< HEAD
 >>>>>>> 396c301... Wrodi pashe grobana forma

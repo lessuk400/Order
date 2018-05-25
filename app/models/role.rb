@@ -16,6 +16,7 @@ class Role < ApplicationRecord
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 class Role < ApplicationRecord
@@ -44,4 +45,9 @@ class Role < ApplicationRecord
     has_role? :admin
   end
 >>>>>>> 8a4fae3... Fixes
+=======
+  def is_admin?
+    has_role? :admin
+  end
+>>>>>>> d1aaad3... Fixes
 end

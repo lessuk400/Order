@@ -30,13 +30,17 @@ class User < ApplicationRecord
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 8a4fae3... Fixes
+=======
+>>>>>>> d1aaad3... Fixes
   def set_admin!
     add_role(:admin)
   end
   def admin?
     has_role?(:admin)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   def set_role
@@ -61,5 +65,7 @@ class User < ApplicationRecord
 >>>>>>> 41ec95b... Code review
 =======
 >>>>>>> 8a4fae3... Fixes
+=======
+>>>>>>> d1aaad3... Fixes
   end
 end
