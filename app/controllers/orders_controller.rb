@@ -14,7 +14,6 @@ class OrdersController < ApplicationController
   private
 
   def order_params
-    params
-      .require(:order).permit(order_meals_attributes: %i[meal_id])
+    params.require(:order).permit(order_meals_attributes: %i[meal_id])
   end
 end
