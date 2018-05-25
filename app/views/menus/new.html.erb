@@ -1,0 +1,181 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-4 ">
+          <div class="card-deck mb-3 text-center">
+            <div class="card mb-4 box-shadow" id="js-main">
+              <div class="card-header">
+                <h4 class="my-0 font-weight-normal">Menu creator</h4>
+              </div>
+              <%= simple_form_for @facade.menu, html: { id: "my-form" } do |f| %>
+                <%= f.input :name %>
+                <%= f.input :date %>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title">Choose the food</small></h1>
+                <div id="meals">
+                    <%= f.fields_for :meals do |meal_form| %>
+                      <%= render 'meal_fields', f: meal_form %>
+                    <% end %>
+
+                    <div class="links">
+                      <%= link_to_add_association 'add meal', f, :meals %>
+                    </div>
+                  </div>
+                  <%= f.button :button, :id => "button-to-add-menu-item", type: "button" do %>
+                      Add to menu
+                <% end %>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 w-100">
+      <div style="position:fixed">
+        <%= f.button :submit %>
+        <% end %>
+      <% FoodItem.meal_types do |key, value| %>
+        <div class="row">
+          <div class="col-12">
+            <h1><%= key %></h1>
+            <div id ="<%= meal-type.value + "-id"%>">
+<<<<<<< HEAD
+<<<<<<< HEAD
+            </div>
+            <hr />
+          </div>
+        </div>
+      <% end %>
+    </div>
+    </div>
+  </div>
+
+</div>
+=======
+<!--begin<%= simple_form_for Menu.new, local: true do |f| %>
+  <%= f.input :name %>
+  <%= f.input :date, value: Date.today %>
+  <% f.object.meals.build %>
+  <%= f.fields_for :meals do |mf| %>
+    <%= mf.select :food_item_id, options_from_collection_for_select(FoodItem.all, :id, :name) %>
+    <%= mf.input :price %>
+  <% end %>
+  <%= f.button :submit %>
+<% end %>
+-->
+=======
+<!--
+>>>>>>> 1b41b07... added some interface
+<%= simple_form_for @menu do |f| %>
+  <%= f.input :name %>
+  <%= f.input :date %>
+  <div id="meals">
+      <%= f.fields_for :meals do |meal_form| %>
+        <%= render 'meal_fields', f: meal_form %>
+      <% end %>
+
+      <div class="links">
+        <%= link_to_add_association 'add meal', f, :meals %>
+      </div>
+    </div>
+
+
+<%= f.button :submit %>
+<% end %>
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 396c301... Wrodi pashe grobana forma
+=======
+<div class="container">
+      <div class="card-deck mb-3 text-center">
+        <div class="card mb-4 box-shadow">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">First</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>10 users included</li>
+              <li>2 GB of storage</li>
+              <li>Email support</li>
+              <li>Help center access</li>
+            </ul>
+            <button type="button" class="btn btn-lg btn-block btn-outline-primary">Sign up for free</button>
+          </div>
+        </div>
+        <div class="card mb-4 box-shadow">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Pro</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$15 <small class="text-muted">/ mo</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>20 users included</li>
+              <li>10 GB of storage</li>
+              <li>Priority email support</li>
+              <li>Help center access</li>
+            </ul>
+            <button type="button" class="btn btn-lg btn-block btn-primary">Get started</button>
+          </div>
+=======
+-->
+=======
+>>>>>>> 9ac2da0... Added coffe to menu form
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-4 ">
+          <div class="card-deck mb-3 text-center">
+            <div class="card mb-4 box-shadow" id="js_main">
+              <div class="card-header">
+                <h4 class="my-0 font-weight-normal">Menu creator</h4>
+              </div>
+              <%= simple_form_for @facade.menu, html: { id: "my-form" } do |f| %>
+                <%= f.input :name %>
+                <%= f.input :date %>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title">Choose the food</small></h1>
+                <div id="meals">
+                    <%= f.fields_for :meals do |meal_form| %>
+                      <%= render 'meal_fields', f: meal_form %>
+                    <% end %>
+
+                    <div class="links">
+                      <%= link_to_add_association 'add meal', f, :meals %>
+                    </div>
+                  </div>
+                  <%= f.button :button, :id => "button-to-add-menu-item", type: "button" do %>
+                      Add to menu
+                <% end %>
+              </div>
+            </div>
+>>>>>>> 1b41b07... added some interface
+        </div>
+    </div>
+    <div class="col-6 w-100">
+      <div style="position:fixed">
+        <%= f.button :submit %>
+        <% end %>
+      <% FoodItem.meal_types do |key, value| %>
+        <div class="row">
+          <div class="col-12">
+            <h1><%= key %></h1>
+            <div id ="<%= meal_type.value + "-id"%>">
+=======
+>>>>>>> 8a4fae3... Fixes
+=======
+>>>>>>> d1aaad3... Fixes
+            </div>
+            <hr />
+          </div>
+        </div>
+<<<<<<< HEAD
+      </div>
+>>>>>>> d58f565... Added Cocoon
+=======
+      <% end %>
+    </div>
+    </div>
+  </div>
+
+</div>
+>>>>>>> 1b41b07... added some interface

@@ -1,0 +1,94 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<div id="flash">
+  <% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %>"><%= value %></div>
+  <% end %>
+<%= user_role_status current_user%>
+<%= week_calendar events: @menus do |date, menus| %>
+  <%= date %>
+  <% menus.each do |menu| %>
+  <h3><%= menu.name %></h3>
+    <ul>
+      <% menu.meals.each do |meal_item| %>
+        <li><%= meal_item.food_item.name %> - <%= meal_item.price %></li>
+      <% end %>
+    </ul>
+  <% end %>
+=======
+<% @menus.each do |menu| %>
+  <p><%= menu.name %></p>
+  <p><% menu.food_items.name %></p>
+<hr />
+>>>>>>> 396c301... Wrodi pashe grobana forma
+<% end %>
+=======
+=======
+<% if flash[:danger] %>
+    <div class="danger"><%= flash[:danger] %></div>
+  <% end %>
+
+>>>>>>> 9f895c4... Simple_form_bootstrap rubocop
+=======
+<div id="flash">
+  <% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %>"><%= value %></div>
+  <% end %>
+<<<<<<< HEAD
+</div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 1b0a9e6... Added pundit
+=======
+<%= week_calendar attribute: :created_at, menus: @menus do |date, menu_items| %>
+<%= date %>
+<% menu_items.each do |item| %>
+<div>
+  <%= @menus.food_item.name %>
+</div>
+<% end %>
+=======
+=======
+<%= user_role_status current_user%>
+>>>>>>> 41ec95b... Code review
+<%= week_calendar events: @menus do |date, menus| %>
+  <%= date %>
+  <% menus.each do |menu| %>
+  <h3><%= menu.name %></h3>
+    <ul>
+      <% menu.meals.each do |meal_item| %>
+        <li><%= meal_item.food_item.name %> - <%= meal_item.price %></li>
+      <% end %>
+<<<<<<< HEAD
+    <% end %>
+>>>>>>> 756818d... Added calendar
+=======
+    </ul>
+  <% end %>
+>>>>>>> 4d9bc9a... Menu check
+<% end %>
+<<<<<<< HEAD
+>>>>>>> 610a3c3... Callendar
+<div class="container-fluid" >
+  <div class="row">
+    <div class="col-10">
+      <% @menus.each do |menu| %>
+        <p><%= menu.name %></p>
+        <p><% menu.meals.each do |meal| %></p>
+        <ul>
+          <li><%= meal.food_item.name %></li>
+          <li><%= meal.price %></li>
+        </ul>
+      <% end %>
+      <%end %>
+    </div>
+    <div class="col-2">
+     <%= user_role_status current_user %>
+    </div>
+  </div>
+</div>
+>>>>>>> d58f565... Added Cocoon
+=======
+>>>>>>> 41ec95b... Code review

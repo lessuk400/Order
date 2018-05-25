@@ -1,0 +1,26 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<%= simple_form_for @food_item do |f| %>
+  <%= f.input :price, label: "Price" %>
+  <%= f.input :name, label: "Name" %>
+<<<<<<< HEAD
+<<<<<<< HEAD
+  <%= f.input :description, input_html: {value: "Very delicious dish"}, label: "Description" %>
+  <%= f.input :meal_type, collection: FoodItem.meal_types, label: "Type" %>
+=======
+<%= simple_form_for @foodItem do |f| %>
+=======
+<%= simple_form_for @food_item do |f| %>
+>>>>>>> 9f895c4... Simple_form_bootstrap rubocop
+  <%= f.input :price, label: "Price" %>
+  <%= f.input :name, label: "Name" %>
+  <%= f.input :mealType, label: "Type" %>
+>>>>>>> 396c301... Wrodi pashe grobana forma
+=======
+  <%= f.input :meal_type, collection: FoodItem.meal_types.keys, label: "Type" %>
+>>>>>>> d2cdaec... tried enum
+=======
+  <%= f.input :meal_type, collection: FoodItem.meal_types, label: "Type" %>
+>>>>>>> 610a3c3... Callendar
+  <%= f.button :submit %>
+<% end %>

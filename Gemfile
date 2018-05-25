@@ -38,13 +38,26 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 41ec95b... Code review
+  gem 'dotenv-rails'
+  gem 'pry-rails'
+=======
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
+>>>>>>> fe98bb6... Done with Ruboco
+=======
+  gem 'pry-rails'
+>>>>>>> 9ac2da0... Added coffe to menu form
 end
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
-  gem 'web-console', '>= 3.3.0'
+
   gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'web-console', '>= 3.3.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
@@ -59,12 +72,42 @@ group :test do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
-#custom
-gem "sprockets-rails"
-gem 'jquery-rails'
+# custom
+
 gem 'bootstrap', '~> 4.1.1'
-gem "devise"
-gem 'simple_form'
 gem 'carrierwave', '~> 1.0'
+<<<<<<< HEAD
+<<<<<<< HEAD
+gem 'cocoon'
+gem 'devise'
+gem 'draper'
+gem 'jquery-rails'
+gem 'pundit'
+gem 'rolify'
+gem 'simple_calendar', '~> 2.0'
+gem 'simple_form'
+gem 'sprockets-rails'
+=======
+gem "rolify"
+gem "cocoon"
+>>>>>>> d58f565... Added Cocoon
+=======
+gem 'cocoon'
+gem 'devise'
+gem 'draper'
+gem 'jquery-rails'
+gem 'pundit'
+gem 'rolify'
+gem 'simple_calendar', '~> 2.0'
+gem 'simple_form'
+gem 'sprockets-rails'
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> fe98bb6... Done with Ruboco
+=======
+gem "pundit"
+>>>>>>> 1b0a9e6... Added pundit
+=======
+>>>>>>> 4d9bc9a... Menu check

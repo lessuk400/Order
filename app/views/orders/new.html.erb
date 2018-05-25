@@ -1,0 +1,47 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<%= simple_form_for @facade.order do |f| %>
+<<<<<<< HEAD
+<<<<<<< HEAD
+  <%= f.fields_for :order_meals do |o_m_f| %>
+      <%= o_m_f.input :meal_id, collection: o_m_f.object.related_food_items %>
+<<<<<<< HEAD
+<<<<<<< HEAD
+        
+=======
+<%= simple_form_for @order do |f| %>
+=======
+<%= simple_form_for @facade.order do |f| %>
+>>>>>>> 9ac2da0... Added coffe to menu form
+  <%= f.input :user_id, input_html: {value: current_user.id} %>
+  <%= f.fields_for :order_meals do |o_m_f| %>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <%= o_m_f.input :meal_id, collection: Menu.last.meals %>
+>>>>>>> 02a7fd6... Orders with OrderMeals
+=======
+    <%= o_m_f.input :meal_id, collection: Menu.last.meals, label_method: lambda {|meal| "#{meal.food_item.name}"} %>
+>>>>>>> fe98bb6... Done with Ruboco
+=======
+    <%= o_m_f.input :meal_id, collection: menu_items_for_selection, label_method: lambda {|meal| "#{meal.food_item.name}"} %>
+>>>>>>> fceb1e1... added enum
+=======
+      <%= o_m_f.input :meal_id, collection: menu_items_for_selection, label_method: lambda {|meal_name| meal_name.food_item.name } %>
+>>>>>>> d2cdaec... tried enum
+=======
+  <%= f.input :user_id, input_html: { value: current_user.id } %>
+  <%= f.fields_for :order_meals do |o_m_f| %>
+      <%= o_m_f.input :meal_id, collection: o_m_f.object.related_food_items, label_method: :name %>
+>>>>>>> 393483a... Draper on orders
+=======
+  <%= f.fields_for :order_meals do |o_m_f| %>
+      <%= o_m_f.input :meal_id, collection: o_m_f.object.related_food_items %>
+>>>>>>> 41ec95b... Code review
+=======
+>>>>>>> 8a4fae3... Fixes
+=======
+>>>>>>> d1aaad3... Fixes
+  <% end %>
+  <%= f.submit %>
+<% end %>

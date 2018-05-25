@@ -1,0 +1,31 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8a4fae3... Fixes
+=======
+>>>>>>> d1aaad3... Fixes
+<div class="nested-fields">
+  <%= f.input :food_item_id, collection: food_items_for_select(@facade.food_items), input_html: { class: "js-food-item-get-price" } %>
+  <%= f.input :price, input_html: {class: "js-food-item-set-price"} %>
+  <%= link_to_remove_association "remove meal", f, class: "js-remove-item" %>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<div class="nested-fields" >
+  <%= f.input :food_item_id, collection: FoodItem.all, input_html: {id: "food_item"} %>
+  <%= f.input :price, input_html: {id: "food_item_price"} %>
+  <%= link_to_remove_association "remove meal", f %>
+>>>>>>> d58f565... Added Cocoon
+=======
+<div class="nested-fields">
+  <%= f.input :food_item_id, collection: food_items_for_select(@facade.food_items), input_html: { class: "js-food-item" } %>
+  <%= f.input :price, input_html: {class: "js-food-item"} %>
+  <%= link_to_remove_association "remove meal", f, class: "js_remove_item" %>
+>>>>>>> 9ac2da0... Added coffe to menu form
+=======
+>>>>>>> 8a4fae3... Fixes
+=======
+>>>>>>> d1aaad3... Fixes
+</div>
