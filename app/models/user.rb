@@ -10,11 +10,13 @@ class User < ApplicationRecord
   before_create :set_admin!, unless: -> { self.class.exists? }
 >>>>>>> 41ec95b... Code review
   mount_uploader :avatar, AvatarUploader
-<<<<<<< HEAD
   has_many :orders, dependent: :destroy
+<<<<<<< HEAD
 =======
   has_many :orders
 >>>>>>> 02a7fd6... Orders with OrderMeals
+=======
+>>>>>>> 8a4fae3... Fixes
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
@@ -27,11 +29,15 @@ class User < ApplicationRecord
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8a4fae3... Fixes
   def set_admin!
     add_role(:admin)
   end
   def admin?
     has_role?(:admin)
+<<<<<<< HEAD
 =======
   def set_role
 <<<<<<< HEAD
@@ -53,5 +59,7 @@ class User < ApplicationRecord
   def set_admin!
     add_role :admin
 >>>>>>> 41ec95b... Code review
+=======
+>>>>>>> 8a4fae3... Fixes
   end
 end

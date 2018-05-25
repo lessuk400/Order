@@ -11,11 +11,11 @@ class FoodItemsController < ApplicationController
 
   def create
     @food_item = FoodItem.create(food_items_params)
-<<<<<<< HEAD
-    
-=======
 
+<<<<<<< HEAD
 >>>>>>> 41ec95b... Code review
+=======
+>>>>>>> 8a4fae3... Fixes
     redirect_to food_items_path
   end
 
@@ -23,6 +23,7 @@ class FoodItemsController < ApplicationController
 
   def food_items_params
     params.require(:food_item).permit(:name, :description, :price, :meal_type)
+<<<<<<< HEAD
 =======
     @foodItems = FoodItem.all
 =======
@@ -48,5 +49,7 @@ class FoodItemsController < ApplicationController
 =======
     params.require(:food_item).permit(:name, :price, :meal_type)
 >>>>>>> d2cdaec... tried enum
+=======
+>>>>>>> 8a4fae3... Fixes
   end
 end

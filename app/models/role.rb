@@ -15,6 +15,7 @@ class Role < ApplicationRecord
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 class Role < ApplicationRecord
@@ -38,4 +39,9 @@ class Role < ApplicationRecord
     has_role? :admin
   end
 >>>>>>> 9ac2da0... Added coffe to menu form
+=======
+  def is_admin?
+    has_role? :admin
+  end
+>>>>>>> 8a4fae3... Fixes
 end

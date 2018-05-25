@@ -6,6 +6,7 @@ class MenuPolicy < ApplicationPolicy
   def new?
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     user&.admin?
 =======
     user.has_role? :admin if !user.nil?
@@ -13,5 +14,8 @@ class MenuPolicy < ApplicationPolicy
 =======
     user&.has_role? :admin
 >>>>>>> 4d9bc9a... Menu check
+=======
+    user&.admin?
+>>>>>>> 8a4fae3... Fixes
   end
 end

@@ -29,7 +29,9 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 /public/uploads
-<<<<<<< HEAD
 .env
+<<<<<<< HEAD
 =======
 >>>>>>> 41ec95b... Code review
+=======
+>>>>>>> 8a4fae3... Fixes

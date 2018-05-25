@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   include Pundit
   
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
@@ -31,6 +32,10 @@ class ApplicationController < ActionController::Base
 =======
   include Pundit
 >>>>>>> 41ec95b... Code review
+=======
+  include Pundit  
+
+>>>>>>> 8a4fae3... Fixes
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
 
   private
