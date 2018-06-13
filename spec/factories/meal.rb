@@ -10,7 +10,7 @@ FactoryBot.define do
     end
 
     FoodItem.meal_types.keys.each do |meal_type|
-      trait(meal_type) { association :food_item, factory: [:food_item, meal_type] }
+      trait(meal_type.to_sym) { association :food_item, factory: [:food_item, meal_type.to_sym] }
     end
   end
 end

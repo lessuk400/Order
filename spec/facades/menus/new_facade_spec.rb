@@ -11,17 +11,17 @@ RSpec.describe Menus::NewFacade do
     end
   end
 
-  describe '#menu_saved?' do
+  describe '#menu_persisted?' do
     context 'menu valid' do
       it 'is available' do
-        allow(result.menu).to receive(:persisted?) { true }
-        expect(result.menu_saved?).to be true
+        allow(result.menu).to receive(:persisted?).and_return(true)
+        expect(result.menu_persisted?).to be true
       end
     end
 
     context 'menu invalid' do
       it 'is persisted' do
-        expect(result.menu_saved?).to be false
+        expect(result.menu_persisted?).to be false
       end
     end
   end
@@ -35,14 +35,14 @@ RSpec.describe Menus::NewFacade do
   describe '#weekend?' do
     context 'weekdays' do
       it 'is valid' do
-        allow(Date).to receive(:today) { Date.new(2018,6,11) }
+        allow(Date).to receive(:today) { Date.new(2018, 6, 11) }
         expect(result.weekend?).to be false
       end
     end
 
     context 'weekends' do
       it 'is invalid' do
-        allow(Date).to receive(:today) { Date.new(2018,6,9) }
+        allow(Date).to receive(:today) { Date.new(2018, 6, 9) }
         expect(result.weekend?).to be true
       end
     end
@@ -50,7 +50,7 @@ RSpec.describe Menus::NewFacade do
 
   describe '#menu_already_exist?' do
     context 'menu already exist' do
-      before {create(:menu, :with_meals, :for_today)}
+      before { create(:menu, :with_meals, :for_today) }
 
       it 'return true' do
         expect(result.menu_already_exist?).to be true

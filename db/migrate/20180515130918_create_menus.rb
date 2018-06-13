@@ -1,7 +1,7 @@
 class CreateMenus < ActiveRecord::Migration[5.2]
   def change
     create_table :menus do |t|
-      t.date :date
+      t.date   :date
       t.string :name
 
       t.timestamps

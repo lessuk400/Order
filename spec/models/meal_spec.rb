@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe(Meal, type: :model) do
-
   context 'associations' do
     it{ should have_many(:order_meals)                  }
     it{ should have_many(:orders).through(:order_meals) }

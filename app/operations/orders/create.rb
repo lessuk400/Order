@@ -2,7 +2,7 @@
 
 module Orders
   class Create < Callable
-    def initialize(user_id = nil, params = {})
+    def initialize(user_id, params = {})
       @user_id      = user_id
       @order_params = params
     end
@@ -16,10 +16,10 @@ module Orders
     attr_reader :order_params, :user_id
 
     def order
-      Order.create(creation_params).decorate
+      Order.create(merged_order_params).decorate
     end
 
-    def creation_params
+    def merged_order_params
       order_params.merge(user_id: user_id)
     end
   end

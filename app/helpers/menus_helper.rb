@@ -7,7 +7,5 @@ module MenusHelper
 
   def user_role_status(current_user)
     return t('menus_messages.new.helpers.admin') if current_user.admin?
-
-    return t('menus_messages.new.helpers.customer') unless current_user
   end
 end

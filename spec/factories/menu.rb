@@ -10,7 +10,7 @@ FactoryBot.define do
       after(:build) do |menu, evaluator|
         evaluator.meal_count.times do
           FoodItem.meal_types.keys.each do |meal_type|
-            menu.meals << build(:meal, meal_type)
+            menu.meals << build(:meal, meal_type.to_sym)
           end
         end
       end

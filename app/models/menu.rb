@@ -8,4 +8,8 @@ class Menu < ApplicationRecord
 
   validates :name, :date, presence: true
   validates :meals, with_all_meal_types: true
+
+  def self.today_menu
+    Menu.where(date: Date.today).first
+  end
 end

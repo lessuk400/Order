@@ -1,7 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Orders::Create do
-  let(:result) { described_class.new() }
+  let(:user_id) { create(:user).id }
+  let(:result) { described_class.new(user_id) }
 
   describe '#call' do
     it 'returns Orders NewFacade' do

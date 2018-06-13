@@ -15,7 +15,7 @@ module Orders
     end
 
     def menu
-      @menu ||= Menu.last
+      @menu ||= Menu.today_menu
     end
 
     def meals
@@ -29,12 +29,14 @@ module Orders
     end
 
     def built_meal(meal_type)
-      OrderMeal.new(
-        meal_attributes: {
+      OrderMeal.new(meal_attributes: meal_attributes(meal_type))
+    end
+
+    def meal_attributes(meal_type)
+      {
           menu:                 menu,
           food_item_attributes: { meal_type: meal_type }
-        }
-      )
+      }
     end
   end
 end

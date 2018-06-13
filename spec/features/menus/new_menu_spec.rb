@@ -24,10 +24,9 @@ RSpec.describe 'Menus creation', type: :feature, js: true do
     before do
       sign_in admin
 
-      create(:food_item, :drink)
-      create(:food_item, :first_meal)
-      create(:food_item, :main_meal)
-
+      FoodItem.meal_types.keys.each do |meal_type|
+        create(:food_item, meal_type.to_sym)
+      end
 
       visit new_menu_path
     end
@@ -92,7 +91,6 @@ RSpec.describe 'Menus creation', type: :feature, js: true do
           fill_in 'menu_name', with: menu_params[:name]
 
           find('#submit-button').trigger('click')
-          save_screenshot
           expect(page).to have_content('Please select food item')
         end
       end
@@ -133,10 +131,10 @@ RSpec.describe 'Menus creation', type: :feature, js: true do
       expect(page).to have_content('You are not admin of this lunch.')
     end
   end
+
   context 'without sign in' do
-    before do
-      visit new_menu_path
-    end
+    before { visit new_menu_path }
+
     it 'show sign in page' do
       expect(page).to have_content('Log in')
     end

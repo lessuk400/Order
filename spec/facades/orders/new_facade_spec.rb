@@ -12,7 +12,7 @@ RSpec.describe Orders::NewFacade do
   describe '#order_saved?' do
     context 'order is valid' do
       it 'returns true' do
-        allow(result.order).to receive(:persisted?) { true }
+        allow(result.order).to receive(:persisted?).and_return(true)
 
         expect(result.order_saved?).to be true
       end
@@ -34,12 +34,14 @@ RSpec.describe Orders::NewFacade do
   end
 
   describe '#meals' do
-    let(:menu) { create(:menu, :for_today, :with_meals) }
+    let(:menu)  { create(:menu, :for_today, :with_meals) }
+    let(:meals) { menu.meals }
+    let(:meal)  { menu.meals.first }
 
     it 'returns menu' do
-      allow(result).to receive(:meals) { menu.meals }
+      allow(result).to receive(:meals).and_return meals
 
-      expect(result.meals).to include menu.meals.first
+      expect(result.meals).to include meal
     end
   end
 end

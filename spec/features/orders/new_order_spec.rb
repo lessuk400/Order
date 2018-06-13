@@ -13,6 +13,7 @@ RSpec.describe 'Order creation', type: :feature, js: true do
 
     click_on('Create Order')
   end
+
   context 'logged in' do
     let(:customer) { create(:user) }
 

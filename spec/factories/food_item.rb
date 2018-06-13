@@ -6,19 +6,7 @@ FactoryBot.define do
     meal_type    { FoodItem::DRINK              }
 
     FoodItem.meal_types.keys.each do |meal_type|
-        trait(meal_type) { meal_type(meal_type) }
-    end
-
-    trait :drink do
-      meal_type FoodItem::DRINK
-    end
-
-    trait :first_meal do
-      meal_type FoodItem::FIRST_MEAL
-    end
-
-    trait :main_meal do
-      meal_type FoodItem::MAIN_MEAL
+      trait(meal_type.to_sym) { meal_type(meal_type) }
     end
   end
 end

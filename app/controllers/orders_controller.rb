@@ -1,19 +1,17 @@
 # frozen_string_literal: true
 
 class OrdersController < ApplicationController
+  before_action :authenticate
+
   def index
-    authorize(Order)
+    @orders = OrderDecorator.decorate_collection(Order.all)
   end
 
   def new
-    authorize(Order)
-
     @order = Orders::NewFacade.new
   end
 
   def create
-    authorize(Order)
-
     @order = Orders::Create.call(current_user.id, order_params)
 
     return redirect_to orders_path if @order.order_saved?
@@ -25,5 +23,9 @@ class OrdersController < ApplicationController
 
   def order_params
     params.require(:order).permit(order_meals_attributes: %i[meal_id])
+  end
+
+  def authenticate
+    authorize(Order)
   end
 end

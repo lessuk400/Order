@@ -15,10 +15,10 @@ module Menus
     attr_reader :params
 
     def menu
-      Menu.create(create_params)
+      Menu.create(menu_params)
     end
 
-    def create_params
+    def menu_params
       params.merge(date: Date.today)
     end
   end

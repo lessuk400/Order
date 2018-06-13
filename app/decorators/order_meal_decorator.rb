@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 class OrderMealDecorator < ApplicationDecorator
-  delegate :meal_type,        to: :food_item, allow_nil: true
-  delegate :food_item, :menu, to: :meal,      allow_nil: true
+  delegate :meal_type, :name, :price, to: :food_item, allow_nil: true
+  delegate :food_item, :menu,         to: :meal,      allow_nil: true
 
   def related_food_items
     menu.meals
@@ -12,6 +12,6 @@ class OrderMealDecorator < ApplicationDecorator
   end
 
   def menu
-    Menu.last
+    Menu.today_menu
   end
 end

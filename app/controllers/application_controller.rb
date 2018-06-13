@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 class ApplicationController < ActionController::Base
-  before_action :authenticate_user!
   include Pundit
+  before_action :authenticate_user!
 
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
 
@@ -16,6 +16,6 @@ class ApplicationController < ActionController::Base
   end
 
   def require_login
-    redirect_to 'new_user_registration_path' unless current_user&.id
+    redirect_to 'new_user_registration_path' unless current_user.id
   end
 end

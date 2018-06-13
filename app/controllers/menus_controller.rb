@@ -1,15 +1,13 @@
 # frozen_string_literal: true
 
 class MenusController < ApplicationController
-  def index
-    authorize(Menu)
+  before_action :authenticate
 
+  def index
     @menus = Menu.all
   end
 
   def new
-    authorize(Menu)
-
     @facade = Menus::NewFacade.new
 
     return redirect_weekend    if @facade.weekend?
@@ -17,11 +15,9 @@ class MenusController < ApplicationController
   end
 
   def create
-    authorize(Menu)
-
     @facade = Menus::Create.call(menus_params)
 
-    return redirect_to menus_path if @facade.menu_saved?
+    return redirect_to menus_path if @facade.menu_persisted?
 
     render :new
   end
@@ -43,5 +39,9 @@ class MenusController < ApplicationController
 
   def redirect_menu_exist
     redirect_to root_path, alert: t('menus_messages.new.messages.already_created')
+  end
+
+  def authenticate
+    authorize(Menu)
   end
 end

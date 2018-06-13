@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe(Menu, type: :model) do
-
   context 'validation' do
     it { should validate_presence_of(:name) }
     it { should validate_presence_of(:date) }

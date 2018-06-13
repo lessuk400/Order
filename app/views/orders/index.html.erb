@@ -1,9 +1,9 @@
 <h2>This is order page</h2>
-<% Order.all.each do |order| %>
+<% @orders.each do |order| %>
 <hr />
   <% order.order_meals.each do |order_meal| %>
-    <p><%= order_meal.meal.food_item.name %></p>
-    <p><%= order_meal.meal.food_item.price %></p>
+    <p><%= order_meal.name %></p>
+    <p><%= order_meal.price %></p>
 <% end %>
 <hr />
 <% end %>

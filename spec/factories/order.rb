@@ -8,7 +8,7 @@ FactoryBot.define do
         menu = create(:menu, :with_meals, :for_today)
 
         menu.meals.each_with_index do |meal, index|
-          order.order_meals << (create(:order_meal, FoodItem.meal_types.keys[index], order: order))
+          order.order_meals << (create(:order_meal, FoodItem.meal_types.keys[index].to_sym, order: order))
         end
       end
     end

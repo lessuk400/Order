@@ -2,16 +2,14 @@
 
 module Menus
   class NewFacade
+    delegate :persisted?, to: :menu, prefix: true
+
     def initialize(**params)
       @menu = params[:menu]
     end
 
     def menu
-      @menu ||= Menu.new(meals: new_meals)
-    end
-
-    def menu_saved?
-      menu.persisted?
+      @menu ||= Menu.new(meals: meals)
     end
 
     def food_items
@@ -23,17 +21,17 @@ module Menus
     end
 
     def menu_already_exist?
-      Menu.last&.date == Date.today
+      Menu.today_menu&.date == Date.today
     end
 
     private
 
-    def new_meals
-      Array[new_meal]
+    def meals
+      @meals ||= Array[meal]
     end
 
-    def new_meal
-      Meal.new
+    def meal
+      @meal ||= Meal.new
     end
   end
 end
