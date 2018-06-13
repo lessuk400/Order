@@ -7,5 +7,8 @@ class Meal < ApplicationRecord
   has_many :order_meals
   has_many :orders, through: :order_meals
 
+  validates_presence_of :menu
+  validates_presence_of :food_item
+
   accepts_nested_attributes_for :food_item
 end

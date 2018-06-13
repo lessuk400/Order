@@ -12,16 +12,16 @@ class MenusController < ApplicationController
 
     @facade = Menus::NewFacade.new
 
-    redirect_weekend    if @facade.menu_already_exist?
-    redirect_menu_exist if @facade.weekend?
+    return redirect_weekend    if @facade.weekend?
+    return redirect_menu_exist if @facade.menu_already_exist?
   end
 
   def create
     authorize(Menu)
 
-    @menu = Menu.new(menus_params)
+    @facade = Menus::Create.call(menus_params)
 
-    return redirect_to menus_path if @menu.save
+    return redirect_to menus_path if @facade.menu_saved?
 
     render :new
   end

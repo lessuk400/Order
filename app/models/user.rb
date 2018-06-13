@@ -10,8 +10,9 @@ class User < ApplicationRecord
 
   has_many :orders, dependent: :destroy
 
+  validates_presence_of :name
   validates_presence_of :email
-  validates_presence_of :avatar
+
   validates_integrity_of :avatar
   validates_processing_of :avatar
 

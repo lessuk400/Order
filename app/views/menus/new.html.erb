@@ -7,15 +7,15 @@
                 <h4 class="my-0 font-weight-normal">Menu creator</h4>
               </div>
               <%= simple_form_for @facade.menu, html: { id: "my-form" } do |f| %>
+                <%= f.object.errors[:meal].first %>
                 <%= f.input :name %>
-                <%= f.input :date %>
+                <%= f.input :date, as: :date, html5: true %>
               <div class="card-body">
-                <h1 class="card-title pricing-card-title">Choose the food</small></h1>
+                <h1 class="card-title pricing-card-title">Choose the food</h1>
                 <div id="meals">
                     <%= f.fields_for :meals do |meal_form| %>
                       <%= render 'meal_fields', f: meal_form %>
                     <% end %>
-
                     <div class="links">
                       <%= link_to_add_association 'add meal', f, :meals %>
                     </div>
@@ -29,7 +29,7 @@
     </div>
     <div class="col-6 w-100">
       <div style="position:fixed">
-        <%= f.button :submit %>
+        <%= f.button :submit, id: "submit-button" %>
         <% end %>
       <% FoodItem.meal_types do |key, value| %>
         <div class="row">

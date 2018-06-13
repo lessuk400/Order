@@ -2,8 +2,16 @@
 
 module Menus
   class NewFacade
+    def initialize(**params)
+      @menu = params[:menu]
+    end
+
     def menu
       @menu ||= Menu.new(meals: new_meals)
+    end
+
+    def menu_saved?
+      menu.persisted?
     end
 
     def food_items

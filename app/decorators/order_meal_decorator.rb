@@ -10,4 +10,8 @@ class OrderMealDecorator < ApplicationDecorator
       .where(food_items: { meal_type: meal_type })
       .pluck('food_items.name, meals.id')
   end
+
+  def menu
+    Menu.last
+  end
 end

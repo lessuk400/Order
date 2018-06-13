@@ -6,5 +6,6 @@ class Menu < ApplicationRecord
 
   accepts_nested_attributes_for :meals
 
-  validates :name, presence: true
+  validates :name, :date, presence: true
+  validates :meals, with_all_meal_types: true
 end

@@ -16,9 +16,11 @@ class FoodItemsController < ApplicationController
   def create
     authorize(FoodItem)
 
-    @food_item = FoodItem.create(food_items_params)
+    @food_item = FoodItem.new(food_items_params)
 
-    redirect_to food_items_path
+    return redirect_to food_items_path if @food_item.save
+
+    render new_food_item_path
   end
 
   private

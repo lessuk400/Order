@@ -5,5 +5,5 @@ class FoodItemPolicy < ApplicationPolicy
   alias_method :create?, :admin?
   alias_method :new?,    :create?
 
-  public :index?, :create?
+  public :index?, :create?, :new?
 end

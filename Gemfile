@@ -49,11 +49,15 @@ gem 'rolify'
 gem 'simple_calendar', '~> 2.0'
 gem 'simple_form'
 gem 'sprockets-rails'
+gem 'poltergeist'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'dotenv-rails'
   gem 'pry-rails'
+  gem 'database_cleaner'
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
   gem 'rubocop', require: false
 end
 
@@ -69,11 +73,15 @@ end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '>= 2.15', '< 4.0'
+  gem 'capybara'
   gem 'selenium-webdriver'
+  gem 'pundit-matchers', '~> 1.6.0'
+  gem 'capybara-screenshot'
+  gem 'shoulda-matchers', '~> 3.1'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
+gem 'faker'

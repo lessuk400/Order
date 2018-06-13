@@ -2,8 +2,16 @@
 
 module Orders
   class NewFacade
+    def initialize(**params)
+      @order = params[:order]
+    end
+
     def order
       @order ||= Order.new(order_meals: new_order_meals).decorate
+    end
+
+    def order_saved?
+      order.persisted?
     end
 
     def menu

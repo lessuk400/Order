@@ -8,7 +8,7 @@ class OrdersController < ApplicationController
   def new
     authorize(Order)
 
-    @facade = Orders::NewFacade.new
+    @order = Orders::NewFacade.new
   end
 
   def create
@@ -16,9 +16,9 @@ class OrdersController < ApplicationController
 
     @order = Orders::Create.call(current_user.id, order_params)
 
-    return redirect_to orders_path if @order.save
+    return redirect_to orders_path if @order.order_saved?
 
-    render plain: t('orders.create.failed')
+    render :new
   end
 
   private

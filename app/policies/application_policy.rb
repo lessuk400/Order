@@ -7,11 +7,11 @@ class ApplicationPolicy
     @context  = context
   end
 
-  delegate :admin?, to: :user, allow_nil: true
-
   private
 
   attr_reader :user, :resource, :context
+
+  private *delegate(:admin?, to: :user, allow_nil: true)
 
   def act_as_assigned_user?(other_user = resource_user)
     user == other_user

@@ -5,4 +5,6 @@ class OrderMeal < ApplicationRecord
   belongs_to :order
 
   accepts_nested_attributes_for :meal
+
+  delegate :food_item, to: :meal, allow_nil: true
 end

@@ -5,5 +5,5 @@ class MenuPolicy < ApplicationPolicy
   alias_method :create?, :admin?
   alias_method :new?,    :create?
 
-  public :index?, :create?
+  public :index?, :new?, :create?
 end
