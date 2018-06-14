@@ -10,8 +10,9 @@ class MenusController < ApplicationController
   def new
     @facade = Menus::NewFacade.new
 
-    return redirect_weekend    if @facade.weekend?
-    return redirect_menu_exist if @facade.menu_already_exist?
+    return redirect_weekend if @facade.weekend?
+
+    redirect_menu_exist if @facade.menu_already_exist?
   end
 
   def create

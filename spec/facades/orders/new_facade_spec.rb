@@ -19,7 +19,7 @@ RSpec.describe Orders::NewFacade do
     end
 
     context 'order is invalid' do
-      it 'returns true' do
+      it 'returns false' do
         expect(result.order_saved?).to be false
       end
     end

@@ -36,6 +36,4 @@ class ApplicationPolicy
   alias_method :update?,  :not_allowed
   alias_method :edit?,    :update?
   alias_method :destroy?, :not_allowed
-
-  public :index?, :show?, :create?, :new?, :update?, :edit?, :destroy?
 end

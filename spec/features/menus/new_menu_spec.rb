@@ -40,15 +40,17 @@ RSpec.describe 'Menus creation', type: :feature, js: true do
       end
 
       it 'creates menu' do
-        submit_form
+        expect{
+          submit_form
 
-        expect{ sleep 0.1 }.to change(Menu, :count) #TODO - check this one
+          sleep 0.1 }.to change(Menu, :count) #TODO - check this one
       end
 
       it 'creates meals' do
-        submit_form
+        expect{
+          submit_form
 
-        expect{ sleep 0.1 }.to change(Meal, :count) #TODO - check this one
+          sleep 0.1 }.to change(Meal, :count) #TODO - check this one
       end
 
       context 'menu already exist' do
@@ -62,11 +64,11 @@ RSpec.describe 'Menus creation', type: :feature, js: true do
         end
 
         it "doesn`t create menu`" do
-          expect{ refresh }.not_to change(Menu, :count)
+          expect{ submit_form }.not_to change(Menu, :count)
         end
 
         it "doesn`t create meal`" do
-          expect{ refresh }.not_to change(Meal, :count)
+          expect{ submit_form }.not_to change(Meal, :count)
         end
       end
     end
@@ -108,9 +110,9 @@ RSpec.describe 'Menus creation', type: :feature, js: true do
         scenario "doesn`t allow menu creation" do
           fill_in 'menu_name', with: menu_params[:name]
 
-          expect do
+          expect {
             select FoodItem.first.name, from: 'menu[meals_attributes][0][food_item_id]'
-          end.not_to change(Menu, :count)
+          }.not_to change(Menu, :count)
         end
       end
     end

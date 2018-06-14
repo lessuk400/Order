@@ -78,10 +78,10 @@ group :test do
   gem 'pundit-matchers', '~> 1.6.0'
   gem 'capybara-screenshot'
   gem 'shoulda-matchers', '~> 3.1'
+  gem 'faker'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
-gem 'faker'

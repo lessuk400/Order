@@ -145,7 +145,7 @@ RSpec.describe 'Food item creation', type: :feature do
       visit new_food_item_path
     end
 
-      scenario 'no permission' do
+      scenario 'when user has no permission' do
         expect(page).to have_content("You are not admin of this lunch")
       end
     end
