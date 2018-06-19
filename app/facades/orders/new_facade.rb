@@ -10,7 +10,7 @@ module Orders
       @order ||= Order.new(order_meals: new_order_meals).decorate
     end
 
-    def order_saved?
+    def saved?
       order.persisted?
     end
 

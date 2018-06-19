@@ -10,6 +10,6 @@ class Menu < ApplicationRecord
   validates :meals, with_all_meal_types: true
 
   def self.today_menu
-    Menu.where(date: Date.today).first
+    Menu.find_by(date: Date.today)
   end
 end

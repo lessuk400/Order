@@ -14,7 +14,7 @@ class OrdersController < ApplicationController
   def create
     @order = Orders::Create.call(current_user.id, order_params)
 
-    return redirect_to orders_path if @order.order_saved?
+    return redirect_to orders_path if @order.saved?
 
     render :new
   end

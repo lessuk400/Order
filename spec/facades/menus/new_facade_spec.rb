@@ -35,14 +35,14 @@ RSpec.describe Menus::NewFacade do
   describe '#weekend?' do
     context 'weekdays' do
       it 'is valid' do
-        allow(Date).to receive(:today).and_return(Date.new(2018, 6, 11))
+        allow(Date).to receive(:current).and_return(Date.new(2018, 6, 11))
         expect(result.weekend?).to be false
       end
     end
 
     context 'weekends' do
       it 'is invalid' do
-        allow(Date).to receive(:today).and_return(Date.new(2018, 6, 9))
+        allow(Date).to receive(:current).and_return(Date.new(2018, 6, 9))
         expect(result.weekend?).to be true
       end
     end

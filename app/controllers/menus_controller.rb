@@ -28,10 +28,12 @@ class MenusController < ApplicationController
   def menus_params
     params
       .require(:menu)
-      .permit(:name,
-              :price,
-              :date,
-              meals_attributes: %i[price food_item_id _destroy])
+      .permit(
+            :name,
+            :price,
+            :date,
+            meals_attributes: %i[price food_item_id _destroy]
+      )
   end
 
   def redirect_weekend

@@ -9,18 +9,18 @@ RSpec.describe Orders::NewFacade do
     end
   end
 
-  describe '#order_saved?' do
+  describe '#saved?' do
     context 'order is valid' do
       it 'returns true' do
         allow(result.order).to receive(:persisted?).and_return(true)
 
-        expect(result.order_saved?).to be true
+        expect(result.saved?).to be true
       end
     end
 
     context 'order is invalid' do
       it 'returns false' do
-        expect(result.order_saved?).to be false
+        expect(result.saved?).to be false
       end
     end
   end

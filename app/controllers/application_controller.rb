@@ -16,6 +16,6 @@ class ApplicationController < ActionController::Base
   end
 
   def require_login
-    redirect_to new_user_registration_path unless current_user.id
+    redirect_to new_user_registration_path unless current_user
   end
 end

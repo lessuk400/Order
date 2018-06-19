@@ -17,11 +17,11 @@ module Menus
     end
 
     def weekend?
-      Date.today.saturday? || Date.today.sunday?
+      Date.current.saturday? || Date.current.sunday?
     end
 
     def menu_already_exist?
-      Menu.today_menu&.date == Date.today
+      Menu.today_menu&.date == Date.current
     end
 
     private
